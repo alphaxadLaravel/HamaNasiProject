@@ -31,8 +31,8 @@
 							data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false"
 							title="Notifications">
 							
-							<i class="fa fa-cart-plus fs-4" width="1em" height="1em" viewBox="0 0 16 16" aria-hidden="true"></i>
-							<span class="icon-badge">0</span>
+							<i class="mdi mdi-book-plus fs-4" width="1em" height="1em" viewBox="0 0 16 16" aria-hidden="true"></i>
+							<span class="icon-badge">3</span>
 						</a>
 
 						<div class="dropdown-menu p-0" aria-labelledby="notifications-dropdown-toggle">
@@ -44,11 +44,11 @@
 									<div class="row gx-2 justify-content-between align-items-center">
 										<div class="col-auto">
 											<img class="profile-image rounded"
-												src="../assets/images/mbolea-1.jpg"  alt="">
+												src="{{asset('images/property-2.jpg')}}"  alt="">
 										</div>
 										<div class="col">
 											<div class="info">
-												<div class="desc">Mbolea Grade A+</div>
+												<div class="desc">Grill Apartment</div>
 												<div class="meta"> +1</div>
 											</div>
 										</div>
@@ -57,11 +57,11 @@
 									<div class="row gx-2 justify-content-between align-items-center mt-2">
 										<div class="col-auto">
 											<img class="profile-image rounded"
-												src="../assets/images/mbolea-1.jpg" alt="">
+												src="{{asset('images/property-2.jpg')}}" alt="">
 										</div>
 										<div class="col">
 											<div class="info">
-												<div class="desc">Mbolea Grade A+</div>
+												<div class="desc">Gold Tower Cotters</div>
 												<div class="meta"> +2</div>
 											</div>
 										</div>

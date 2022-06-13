@@ -16,3 +16,29 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('common.dashboard');
 });
+
+// Houses for rent here
+Route::get('/house_rent', function () {
+    return view('users.house_rent');
+});
+
+// House for sell
+Route::get('/house_sell', function () {
+    return view('users.house_sell');
+});
+
+// Transport Route
+Route::get('/transport', function () {
+    return view('users.transport');
+});
+
+// My Requests
+Route::get('/my_requests', function () {
+    return view('users.my_requests');
+});
+
+// My Bookings
+Route::get('/my_bookings', function () {
+    return view('users.my_bookings');
+});
+

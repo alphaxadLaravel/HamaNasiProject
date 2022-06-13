@@ -25,7 +25,7 @@
 				<!--//nav-item-->
 				<li class="nav-item">
 					
-					<a class="nav-link" href="">
+					<a class="nav-link" href="/house_rent">
 						<span class="nav-icon">
 							<i  class="mdi  mdi-home-assistant"></i>
 						</span>
@@ -35,7 +35,7 @@
 				</li>
 
 				<li class="nav-item">
-					<a class="nav-link" href="">
+					<a class="nav-link" href="/house_sell">
 						<span class="nav-icon">
 							<i class="mdi mdi-home-modern"></i>
 						</span>
@@ -44,7 +44,7 @@
 					
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="">
+					<a class="nav-link" href="/transport">
 						<span class="nav-icon">
 							<i class="mdi mdi-truck-fast"></i>
 						</span>
@@ -54,7 +54,7 @@
 				</li>
 				<li class="nav-item">
 					
-					<a class="nav-link" href="">
+					<a class="nav-link" href="/my_requests">
 						<span class="nav-icon">
 							<i class="mdi mdi-led-on"></i>
 						</span>
@@ -64,7 +64,7 @@
 				</li>
 				<li class="nav-item">
 					
-					<a class="nav-link" href="">
+					<a class="nav-link" href="/my_bookings">
 						<span class="nav-icon">
 							<i class="mdi mdi-book-plus"></i>
 						</span>
@@ -74,7 +74,7 @@
 				</li>
 				<li class="nav-item">
 					
-					<a class="nav-link" href="">
+					<a class="nav-link" href="/checkout">
 						<span class="nav-icon">
 							<i class="mdi mdi-cash-usd"></i>
 						</span>
@@ -85,7 +85,7 @@
 				
 				<li class="nav-item">
 					
-					<a class="nav-link" href="">
+					<a class="nav-link" href="/profile">
 						<span class="nav-icon">
 							<i class="mdi mdi-account"></i>
 						</span>
