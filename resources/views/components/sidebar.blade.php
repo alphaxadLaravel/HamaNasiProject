@@ -90,6 +90,56 @@
 						<span class="nav-link-text">Profile</span>
 					</a>
 				</li>
+
+				<li class="nav-item">
+					<hr class="mx-3">
+				</li>
+
+				<li class="nav-item">
+					<a class="nav-link" href="/admin_dashboard">
+						<span class="nav-icon">
+							<i class="mdi mdi-account"></i>
+						</span>
+						<span class="nav-link-text">Dashboard</span>
+					</a>
+				</li>
+
+				<li class="nav-item">
+					<a class="nav-link" href="/users">
+						<span class="nav-icon">
+							<i class="mdi mdi-account"></i>
+						</span>
+						<span class="nav-link-text">All users</span>
+					</a>
+				</li>
+				
+				<li class="nav-item">
+					<a class="nav-link" href="/admin_transport">
+						<span class="nav-icon">
+							<i class="mdi mdi-account"></i>
+						</span>
+						<span class="nav-link-text">Transports</span>
+					</a>
+				</li>
+				
+				<li class="nav-item">
+					<a class="nav-link" href="/admin_houses">
+						<span class="nav-icon">
+							<i class="mdi mdi-account"></i>
+						</span>
+						<span class="nav-link-text">Houses</span>
+					</a>
+				</li>
+				
+				<li class="nav-item">
+					<a class="nav-link" href="/users">
+						<span class="nav-icon">
+							<i class="mdi mdi-account"></i>
+						</span>
+						<span class="nav-link-text">Transactions</span>
+					</a>
+				</li>
+
 			</ul>
 			<!--//app-menu-->
 		</nav>

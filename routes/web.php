@@ -66,3 +66,24 @@ Route::get('/profile', function () {
 Route::get('/transport_details', function () {
     return view('users.transport_details');
 });
+
+
+// Admin Dahbosrd route hree
+Route::get('/admin_dashboard', function () {
+    return view('admin.dashboard');
+});
+
+// Admin Users route here
+Route::get('/users', function () {
+    return view('admin.users');
+});
+
+// Admin manage Transports
+Route::get('/admin_transport', function () {
+    return view('admin.transports');
+});
+
+// Admin houses
+Route::get('/admin_houses', function () {
+    return view('admin.houses');
+});

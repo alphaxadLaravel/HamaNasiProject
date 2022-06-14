@@ -67,12 +67,12 @@
 										</div>
 										
 									</div>
-									<a class="link-mask" href="cart.php"></a>
+									<a class="link-mask" href="/my_bookings"></a>
 								</div>
 							</div>
 
 							<div class="dropdown-menu-footer p-2 text-center">
-								<a href="cart.php">All Bookings</a>
+								<a href="/my_bookings">All Bookings</a>
 							</div>
 
 						</div>

@@ -6,14 +6,14 @@
         <h1 class="app-page-title mb-0"><i class="mdi mdi-heart text-danger"></i> My WishList</h1>
     </div>
     <div class="col-auto">
-            <div class="page-utilities">
-                <div class="row g-2 justify-content-start justify-content-md-end align-items-center">
-                    <div class="col-auto">
-                        <a class="btn app-btn-primary" href="/checkout"> <i class="mdi mdi-book-plus"></i>
-                        Book All</a>
-                    </div>
+        <div class="page-utilities">
+            <div class="row g-2 justify-content-start justify-content-md-end align-items-center">
+                <div class="col-auto">
+                    <a class="btn app-btn-primary" href="/checkout"> <i class="mdi mdi-book-plus"></i>
+                    Book All</a>
                 </div>
             </div>
+        </div>
     </div>
 <div class="row g-4">
     <div class="app-card app-card-orders-table shadow-sm mb-5">
