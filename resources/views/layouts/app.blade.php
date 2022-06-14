@@ -7,7 +7,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="shortcut icon" href="favicon.ico">
-
+     @livewireStyles
 	<!-- FontAwesome JS-->
 	<script defer src="{{asset('plugins/fontawesome/js/all.min.js')}}"></script>
 
@@ -30,7 +30,7 @@
         </div>
     </div>
 
-
+     @livewireScripts
 	<!-- Javascript -->
 	<script src="{{asset('plugins/popper.min.js')}}"></script>
 	<script src="{{asset('plugins/bootstrap/js/bootstrap.min.js')}}"></script>

@@ -42,3 +42,7 @@ Route::get('/my_bookings', function () {
     return view('users.my_bookings');
 });
 
+// The checkoutr route here
+Route::get('/checkout', function () {
+    return view('users.checkout');
+});
