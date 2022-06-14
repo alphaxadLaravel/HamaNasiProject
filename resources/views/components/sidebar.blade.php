@@ -169,7 +169,7 @@
 					</a>
 				</li>
 				<li class="nav-item mb-3">
-					<a class="nav-link" href="/transporter_vehicles">
+					<a class="nav-link" href="/transporter_new_vehicle">
 						<span class="nav-icon">
 							<i class="mdi mdi-plus"></i>
 						</span>

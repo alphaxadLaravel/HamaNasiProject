@@ -13,7 +13,28 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Welcome Page here
 Route::get('/', function () {
+    return view('outside.signup');
+});
+
+// Signup page here
+Route::get('/signup', function () {
+    return view('outside.signup');
+});
+
+// Agent signup
+Route::get('/agent_signup', function () {
+    return view('outside.agent_signup');
+});
+
+// Rogin route here
+Route::get('/login', function () {
+    return view('outside.login');
+});
+
+// Welcome Page route here
+Route::get('/home', function () {
     return view('common.dashboard');
 });
 
@@ -108,6 +129,11 @@ Route::get('/transporter_services', function () {
     return view('transporter.my_vehicles');
 });
 
+// Add new vehicle
+Route::get('/transporter_new_vehicle', function () {
+    return view('transporter.new_vehicle');
+});
+
 // Bookings recived by house Agent
 Route::get('/house_agent_bookings', function () {
     return view('house_agent.bookings');
@@ -122,4 +148,6 @@ Route::get('/house_agent_houses', function () {
 Route::get('/house_agent_add_house', function () {
     return view('house_agent.new_house');
 });
+
+
 
