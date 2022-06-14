@@ -119,6 +119,7 @@ Route::get('/house_agent_houses', function () {
 });
 
 // Add houses here
-Route::get('/house_agent_houses', function () {
-    return view('house_agent.my_houses');
+Route::get('/house_agent_add_house', function () {
+    return view('house_agent.new_house');
 });
+
