@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 // Welcome Page here
 Route::get('/', function () {
-    return view('outside.signup');
+    return view('common.index');
 });
 
 // Signup page here
