@@ -22,7 +22,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <?php for ($i=0; $i < 5; $i++) { ?>
+                        <?php for ($i=0; $i < 10; $i++) { ?>
                           <tr>
                           <td class="cell"><img src="{{asset('images/pick1.jpg')}}" class="img-fluid rounded" height="45px" width="45px" alt=""></td>
                           <td class="cell"><span class="truncate">AXF 645 TZ Canter</span></td>
