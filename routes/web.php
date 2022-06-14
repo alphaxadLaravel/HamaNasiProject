@@ -56,3 +56,8 @@ Route::get('/property', function () {
 Route::get('/my_wishlist', function () {
     return view('users.my_wishlist');
 });
+
+// profile route here
+Route::get('/profile', function () {
+    return view('users.profile');
+});
