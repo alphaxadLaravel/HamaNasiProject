@@ -61,3 +61,8 @@ Route::get('/my_wishlist', function () {
 Route::get('/profile', function () {
     return view('users.profile');
 });
+
+// Transport Details route here
+Route::get('/transport_details', function () {
+    return view('users.transport_details');
+});

@@ -32,12 +32,12 @@
     <div class="col-md-3">
         <div class="property-item rounded overflow-hidden">
             <div class="position-relative overflow-hidden">
-                <a href=""><img class="img-fluid w-100" height="250px" src="{{asset('images/pick1.jpg')}}" alt=""></a>
+                <a href="/transport_details"><img class="img-fluid w-100" height="250px" src="{{asset('images/pick1.jpg')}}" alt=""></a>
                 <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Pickup</div>
             </div>
             <div class="p-4 pb-0">
                 <h5 class="text-primary mb-3">Tsh 200,345</h5>
-                <a class="d-block h5 mb-2" href="">No.AXF 548 TZ</a>
+                <a class="d-block h5 mb-2" href="/transport_details">No.AXF 548 TZ</a>
                 <p><i class="fa fa-map-marker-alt text-primary me-2"></i>123 Street, Dar-es-Salaam, TZ</p>
             </div>
         </div>

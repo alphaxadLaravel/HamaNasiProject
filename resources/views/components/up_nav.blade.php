@@ -31,7 +31,7 @@
 							data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false"
 							title="Notifications">
 							
-							<i class="mdi mdi-book-plus fs-4" width="1em" height="1em" viewBox="0 0 16 16" aria-hidden="true"></i>
+							<i class="mdi mdi-heart fs-4" width="1em" height="1em" viewBox="0 0 16 16" aria-hidden="true"></i>
 							<span class="icon-badge">3</span>
 						</a>
 
