@@ -45,7 +45,7 @@
                             <img src="{{asset('images/property-1.jpg')}}" width="60px" height="60px" class="rounded" style="cursor: pointer;">
                         </div>
                         <div class="col-md-4 my-4">
-                            <a class="app-btn-secondary btn w-100" href="/wishlist">❤ Add to whishlist</a>
+                            <a class="app-btn-secondary btn w-100" href="/my_wishlist">❤ Add to whishlist</a>
                         </div>
                     </div>
                 </div>
