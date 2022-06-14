@@ -107,3 +107,18 @@ Route::get('/transporter_routes', function () {
 Route::get('/transporter_services', function () {
     return view('transporter.my_vehicles');
 });
+
+// Bookings recived by house Agent
+Route::get('/house_agent_bookings', function () {
+    return view('house_agent.bookings');
+});
+
+// House agent Houses here
+Route::get('/house_agent_houses', function () {
+    return view('house_agent.my_houses');
+});
+
+// Add houses here
+Route::get('/house_agent_houses', function () {
+    return view('house_agent.my_houses');
+});

@@ -176,6 +176,36 @@
 						<span class="nav-link-text">New Vehicle</span>
 					</a>
 				</li>
+
+				<li class="nav-item">
+					<hr class="mx-3">
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="/house_agent_bookings">
+						<span class="nav-icon">
+							<i class="mdi mdi-book-plus"></i>
+						</span>
+						<span class="nav-link-text">Bookings</span>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="/house_agent_houses">
+						<span class="nav-icon">
+							<i class="mdi mdi-home-modern"></i>
+						</span>
+						<span class="nav-link-text">My Houses</span>
+					</a>
+				</li>
+
+				<li class="nav-item mb-3">
+					<a class="nav-link" href="/house_agent_add_house">
+						<span class="nav-icon">
+							<i class="mdi mdi-plus"></i>
+						</span>
+						<span class="nav-link-text">New House</span>
+					</a>
+				</li>
+
 			</ul>
 			<!--//app-menu-->
 		</nav>
