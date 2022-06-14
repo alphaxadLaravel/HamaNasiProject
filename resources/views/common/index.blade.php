@@ -29,6 +29,7 @@
                     <a href="#properties" class="nav-item nav-link">Properties</a>
                     <a href="#transport" class="nav-item nav-link">Transports</a>
                     <a href="#why" class="nav-item nav-link">About US</a>
+                    <a href="/login" class="nav-item nav-link d-md-none text-success">Login</a>
                 </div>
                 <a href="/login" class="btn btn-primary px-3 d-none d-lg-flex">Login</a>
             </div>
