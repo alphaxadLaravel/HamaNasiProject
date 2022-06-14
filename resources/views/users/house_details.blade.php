@@ -15,8 +15,8 @@
             </div>
         </div>
     </div>
-    <div class="row g-4">
-        <div class="app-card mb-3">
+    <div class="row g-1">
+        <div class="card  border-0 shadow-sm  my-3">
             <div class="row g-0">
                 <div class="col-md-4">
                     <img src="{{asset('images/property-1.jpg')}}" alt="Trendy Pants and Shoes" class="img-fluid rounded-start h-100 w-100" />

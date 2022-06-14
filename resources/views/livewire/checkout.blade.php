@@ -1,6 +1,6 @@
 <div>
-    <div class="row g-3 mb-4 align-items-center justify-content-between">
-        <div class="row gy-4">
+    <div class="row g-1 my-4 align-items-center justify-content-between">
+        <div class="row g-1">
 
             @if ($step1)
                 <div class="col-md-12">
@@ -233,13 +233,6 @@
 
                 </div>
             @endif
-
-
-
-
-
-
-
         </div>
     </div>
 </div>

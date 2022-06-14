@@ -6,13 +6,13 @@
         <h1 class="app-page-title mb-0"><i class="mdi mdi-truck-fast text-danger"></i> Request Transport</h1>
     </div>
     
-    <div class="row g-4">
+    <div class="row g-1 my-4">
         <div class="app-card mb-3">
             <div class="row g-0">
                 <div class="col-md-4">
                     <img src="{{asset('images/pick1.jpg')}}" alt="Trendy Pants and Shoes" class="img-fluid rounded-start h-100 w-100" />
                 </div>
-                <div class="col-md-8 px-4">
+                <div class="col-md-8 px-2">
                     <div class="row g-3 mb-2 align-items-center justify-content-between">
                         <nav id="orders-table-tab" class="orders-table-tab app-nav-tabs nav shadow-sm flex-column flex-sm-row mb-4" role="tablist">
                             <a class="flex-sm-fill text-sm-center nav-link active" id="orders-all-tab" data-bs-toggle="tab" href="#orders-all" role="tab" aria-controls="orders-all" aria-selected="true">Generat Details</a>

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('pages')
-<div class="row g-3 mb-4 align-items-center justify-content-between">
+<div class="row g-1 my-3 align-items-center justify-content-between">
     <div class="col-auto">
         <h1 class="app-page-title mb-0"><i class="mdi mdi-heart text-danger"></i> My WishList</h1>
     </div>
@@ -15,7 +15,7 @@
             </div>
         </div>
     </div>
-<div class="row g-4">
+<div class="row g-1 my-4">
     <div class="app-card app-card-orders-table shadow-sm mb-5">
         <div class="app-card-body">
             <div class="table-responsive">
