@@ -46,3 +46,13 @@ Route::get('/my_bookings', function () {
 Route::get('/checkout', function () {
     return view('users.checkout');
 });
+
+// House details
+Route::get('/property', function () {
+    return view('users.house_details');
+});
+
+// My wish list here
+Route::get('/my_wishlist', function () {
+    return view('users.my_wishlist');
+});

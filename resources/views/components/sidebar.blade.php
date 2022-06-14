@@ -74,6 +74,16 @@
 				</li>
 				<li class="nav-item">
 					
+					<a class="nav-link" href="/my_wishlist">
+						<span class="nav-icon">
+							<i class="mdi mdi-heart"></i>
+						</span>
+						<span class="nav-link-text">My WishList</span>
+					</a>
+					
+				</li>
+				<li class="nav-item">
+					
 					<a class="nav-link" href="/checkout">
 						<span class="nav-icon">
 							<i class="mdi mdi-cash-usd"></i>
