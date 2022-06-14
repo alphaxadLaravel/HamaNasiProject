@@ -98,7 +98,7 @@
 				<li class="nav-item">
 					<a class="nav-link" href="/admin_dashboard">
 						<span class="nav-icon">
-							<i class="mdi mdi-account"></i>
+							<i class="mdi mdi-speedometer"></i>
 						</span>
 						<span class="nav-link-text">Dashboard</span>
 					</a>
@@ -107,7 +107,7 @@
 				<li class="nav-item">
 					<a class="nav-link" href="/users">
 						<span class="nav-icon">
-							<i class="mdi mdi-account"></i>
+							<i class="mdi mdi-account-multiple"></i>
 						</span>
 						<span class="nav-link-text">All users</span>
 					</a>
@@ -116,7 +116,7 @@
 				<li class="nav-item">
 					<a class="nav-link" href="/admin_transport">
 						<span class="nav-icon">
-							<i class="mdi mdi-account"></i>
+							<i class="mdi mdi-truck-fast"></i>
 						</span>
 						<span class="nav-link-text">Transports</span>
 					</a>
@@ -125,21 +125,57 @@
 				<li class="nav-item">
 					<a class="nav-link" href="/admin_houses">
 						<span class="nav-icon">
-							<i class="mdi mdi-account"></i>
+							<i class="mdi mdi-home-modern"></i>
 						</span>
 						<span class="nav-link-text">Houses</span>
 					</a>
 				</li>
 				
-				<li class="nav-item">
-					<a class="nav-link" href="/users">
+				<li class="nav-item mb-3">
+					<a class="nav-link" href="/transactions">
 						<span class="nav-icon">
-							<i class="mdi mdi-account"></i>
+							<i class="mdi mdi-cash-usd"></i>
 						</span>
 						<span class="nav-link-text">Transactions</span>
 					</a>
 				</li>
 
+				<li class="nav-item">
+					<hr class="mx-3">
+				</li>
+
+				<li class="nav-item">
+					<a class="nav-link" href="/transporter_requests">
+						<span class="nav-icon">
+							<i class="mdi mdi-led-on"></i>
+						</span>
+						<span class="nav-link-text">Requests</span>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="/transporter_routes">
+						<span class="nav-icon">
+							<i class="mdi mdi-map-marker-radius"></i>
+						</span>
+						<span class="nav-link-text">Routes</span>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="/transporter_services">
+						<span class="nav-icon">
+							<i class="mdi mdi-car-connected"></i>
+						</span>
+						<span class="nav-link-text">My Services</span>
+					</a>
+				</li>
+				<li class="nav-item mb-3">
+					<a class="nav-link" href="/transporter_vehicles">
+						<span class="nav-icon">
+							<i class="mdi mdi-plus"></i>
+						</span>
+						<span class="nav-link-text">New Vehicle</span>
+					</a>
+				</li>
 			</ul>
 			<!--//app-menu-->
 		</nav>

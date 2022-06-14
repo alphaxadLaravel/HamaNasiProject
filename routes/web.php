@@ -87,3 +87,23 @@ Route::get('/admin_transport', function () {
 Route::get('/admin_houses', function () {
     return view('admin.houses');
 });
+
+// All transactions here
+Route::get('/transactions', function () {
+    return view('admin.transactions');
+});
+
+// Transporter Requests
+Route::get('/transporter_requests', function () {
+    return view('transporter.requests');
+});
+
+// Transport routes
+Route::get('/transporter_routes', function () {
+    return view('transporter.routes');
+});
+
+// My service sroute here
+Route::get('/transporter_services', function () {
+    return view('transporter.my_vehicles');
+});

@@ -13,7 +13,7 @@
                         <select class="form-select w-auto">
                             <option selected="" value="option-1">All Transactions</option>
                             <option value="option-2">House Payments</option>
-                            <option value="option-3">F</option>
+                            <option value="option-3">Transport Transactions</option>
                         </select>
                     </div>
                 </div>
@@ -28,30 +28,22 @@
                     <table class="table app-table-hover mb-0 text-left">
                         <thead>
                             <tr>
-                                <th class="cell">House</th>
-                                <th class="cell"></th>
-                                <th class="cell">Agent Name</th>
-                                <th class="cell">Category</th>
+                                
+                                <th class="cell">From</th>
+                                <th class="cell">To</th>
                                 <th class="cell">Purpose</th>
-                                <th class="cell">Location</th>
                                 <th class="cell">Price</th>
-                                <th class="cell">Block</th>
+                                <th class="cell">Date</th>
                             </tr>
                         </thead>
                         <tbody>
                             <?php for ($i=0; $i < 10; $i++) { ?>
                                 <tr>
-                                    <td class="cell"><img src="{{ asset('images/property-1.jpg') }}"
-                                            class="img-fluid rounded" height="45px" width="45px" alt=""></td>
-                                    <td class="cell"><span class="truncate">MYU-35948-K </span></td>
                                     <td class="cell"><span class="truncate">Alpha Jozee Kakulu</span></td>
-                                    <td class="cell"><span class="truncate text-success">Office</span>
-                                        <td class="cell"><span class="truncate text-success">For rent</span>
-                                        <td class="cell"><span class="truncate">Manzese,Dar-es-Salaam</span>
-                                    <td class="cell"><span class="truncate">567,06754</span>
-                                    </td>
-                                    <td class="cell d-flex">
-                                        <a class="mx-2 btn-sm btn app-btn-secondary" href="#">🚫</a>
+                                    <td class="cell"><span class="truncate">Cannute Hamisi Cannute</span></td>
+                                    <td class="cell"><span class="truncate text-success">House Renting</span>
+                                        <td class="cell"><span class="truncate ">200,0000</span>
+                                    <td class="cell"><span class="truncate">2-02-2022</span>
                                     </td>
                                 </tr>
                             <?php }?>
