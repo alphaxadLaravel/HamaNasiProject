@@ -32,7 +32,8 @@
                                 <th class="cell">From</th>
                                 <th class="cell">To</th>
                                 <th class="cell">Purpose</th>
-                                <th class="cell">Price</th>
+                                <th class="cell">Amount</th>
+                                <th class="cell">Branch</th>
                                 <th class="cell">Date</th>
                             </tr>
                         </thead>
@@ -43,6 +44,7 @@
                                     <td class="cell"><span class="truncate">Cannute Hamisi Cannute</span></td>
                                     <td class="cell"><span class="truncate text-success">House Renting</span>
                                         <td class="cell"><span class="truncate ">200,0000</span>
+                                            <td class="cell"><span class="truncate ">Tigo Pesa</span>
                                     <td class="cell"><span class="truncate">2-02-2022</span>
                                     </td>
                                 </tr>
