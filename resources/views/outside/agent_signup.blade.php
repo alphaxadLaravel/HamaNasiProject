@@ -10,43 +10,44 @@
 
 				<div  class="auth-form-container text-start mx-auto">
 					<form action="/agent" method="POST" class="auth-form auth-signup-form">
+						
+						@csrf
 						<div class="email mb-2">
 							<small class="text-muted">Full Name</small>
-							<input name="signup-name" type="text" class="form-control signup-name" required="required">
+							<input name="fullname" type="text" class="form-control signup-name" required="required">
 						</div>
 						<div class="email mb-2">
 							<small class="text-muted">Username</small>
-							<input name="signup-email" type="text" class="form-control signup-email" required="required">
+							<input name="username" type="text" class="form-control signup-email" required="required">
 						</div>
                         <div class="email mb-2">
                             <small class="text-muted">Agent Type</small>
                             <select class="form-select ">
-                                <option value=""> </option>
-                                <option value="option">House Agent</option>
-                                <option value="option">Transport Agent</option>
+                                <option value="">Select Type of Agent...</option>
+                                <option value="house_agent">House Agent</option>
+                                <option value="transport_agent">Transport Agent</option>
                             </select>
                         </div>
 						<div class="row">
 							<div class="col-md-6">
 								<div class="password mb-2">
 									<small class="text-muted"> Password</small>
-									<input id="signup-password" name="signup-password" type="password" class="form-control signup-password" required="required">
+									<input id="signup-password" name="password" type="password" class="form-control signup-password" required="required">
 								</div>
 							</div>
 							<div class="col-md-6">
 								<div class="password mb-2">
 									<small class="text-muted">Confirm Password</small>
-									<input id="signup-password" name="signup-password" type="password" class="form-control signup-password" required="required">
+									<input id="signup-password" name="password2" type="password" class="form-control signup-password" required="required">
 								</div>
 							</div>
 							<div class="email mb-2">
 								<small class="text-muted">Phone Number</small>
-								<input name="signup-name" type="text" class="form-control signup-name" required="required">
+								<input name="phone" type="text" class="form-control signup-name" required="required">
 							</div>
 						</div>
 						<div class="text-center">
 							<button type="submit" class="btn app-btn-primary w-100 theme-btn mx-auto">Jisajili</button>
-							{{-- <a href="/home" type="submit" class="btn app-btn-primary w-100 theme-btn mx-auto">Signup</a> --}}
 						</div>
 					</form>
 					<div class="auth-option text-center pt-5">Have an Account? <a class="text-link" href="/login">Login Here! </a>| Signup as an <a href="/agent_signup">Agent!</a></div>

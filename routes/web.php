@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\LoginController;
+use App\Http\Controllers\GateController;
+
 
 
 
@@ -141,5 +142,7 @@ Route::get('/house_agent_add_house', function () {
     return view('house_agent.new_house');
 });
 
-// Company adding route here
-Route::post('/agent', [LoginController::class,'agent']);
+
+// Register an Agent here
+Route::post('/agent_auth',[GateController::class,'agents']);
+
