@@ -1,17 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LoginController;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+
 
 // Welcome Page here
 Route::get('/', function () {
@@ -149,5 +141,5 @@ Route::get('/house_agent_add_house', function () {
     return view('house_agent.new_house');
 });
 
-
-
+// Company adding route here
+Route::post('/agent', [LoginController::class,'agent']);

@@ -8,8 +8,6 @@
         <div class="row g-4">
             <div class="app-card app-card-settings shadow-sm p-4">
 
-
-
                 <div class="app-card-body">
                     <form class="settings-form">
                         <div class="row">

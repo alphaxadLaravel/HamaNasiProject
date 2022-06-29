@@ -33,6 +33,7 @@
 
 <body>
     
+    
     @yield('index')
 
     <!-- JavaScript Libraries -->
