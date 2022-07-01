@@ -4,8 +4,6 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GateController;
 
 
-
-
 // Welcome Page here
 Route::get('/', function () {
     return view('common.index');
@@ -145,4 +143,15 @@ Route::get('/house_agent_add_house', function () {
 
 // Register an Agent here
 Route::post('/agent_auth',[GateController::class,'agents']);
+
+// Register normal user hapa
+Route::post('/user_signup',[GateController::class,'normalUser']);
+
+// Login all users here
+Route::post('/login_users',[GateController::class,'login']);
+
+// Addd new house routr here
+Route::post('/login_users',[GateController::class,'login']);
+
+
 

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('pages')
-    <h1 class="app-page-title text-muted">👋 Hi, <span class="text-success">Alphaxad!</span></h1>
+    <h1 class="app-page-title text-muted">👋 Hi, <span class="text-success">{{ucfirst(session()->get('user')['username'])}}!</span></h1>
 
     <div class="row g-4">
 
@@ -111,7 +111,7 @@
     <h1 class="app-page-title text-muted my-4"><i class="mdi mdi-home-modern"></i> Explore <span class="text-primary">Houses</span></h1>
 
     <div class="row g-4">
-        @for ($i = 0; $i < 6; $i++)
+        @for ($i = 0; $i < 3; $i++)
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
                 <div class="card border-0 shadow-sm rounded overflow-hidden">
                     <div class="position-relative overflow-hidden">
@@ -136,7 +136,7 @@
     <h1 class="app-page-title text-muted "><i class="mdi mdi-home-modern"></i> Explore <span class="text-primary">Transports</span></h1>
 
     <div class="row g-4">
-        @for ($i = 0; $i < 6; $i++)
+        @for ($i = 0; $i < 3; $i++)
         <div class="col-lg-4 col-md-6">
             <div class="property-item rounded overflow-hidden">
                 <div class="position-relative overflow-hidden">
