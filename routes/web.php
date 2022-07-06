@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GateController;
+use App\Http\Controllers\DashboardController;
 
 
 // Welcome Page here
@@ -29,14 +30,9 @@ Route::get('/home', function () {
     return view('common.dashboard');
 });
 
-// Houses for rent here
-Route::get('/house_rent', function () {
-    return view('users.house_rent');
-});
-
 // House for sell
-Route::get('/house_sell', function () {
-    return view('users.house_sell');
+Route::get('/houses', function () {
+    return view('users.houses');
 });
 
 // Transport Route
@@ -79,11 +75,8 @@ Route::get('/transport_details', function () {
     return view('users.transport_details');
 });
 
-
 // Admin Dahbosrd route hree
-Route::get('/admin_dashboard', function () {
-    return view('admin.dashboard');
-});
+Route::get('/dashboard',[DashboardController::class,'adminDashboard']);
 
 // Admin Users route here
 Route::get('/users', function () {

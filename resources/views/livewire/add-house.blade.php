@@ -2,7 +2,7 @@
     <div class="app-card app-card-settings shadow-sm p-4">
 
         <div class="app-card-body">
-            <form action="" wire:submit.prevent="addHouse" method="POST" class="settings-form">
+            <form action="" wire:submit.prevent="addHouse" method="POST" enctype="multipart/form-data" class="settings-form">
                 @csrf
                 <div class="row">
                     <div class="col-md-4">
@@ -25,8 +25,8 @@
                             <select class="form-select" wire:model="region" id="">
                                 <option>Select the region...</option>
                                 <option value="Mwanza">Mwanza</option>
-                                <option value="">Dodoma</option>
-                                <option value="">Kigoma</option>
+                                <option value="Dodma">Dodoma</option>
+                                <option value="Kigoma">Kigoma</option>
                                 <option>Dar</option>
                             </select>
                             <small  class="text-danger">
@@ -42,10 +42,10 @@
                                     class="text-danger">*</span></label>
                             <select class="form-select "  wire:model="district">
                                 <option value="">Selct District...</option>
-                                <option value="option-1">Ilala</option>
-                                <option value="option-1">kigamboni</option>
-                                <option value="option-1">Temeke</option>
-                                <option value="option-1">Kinondoni</option>
+                                <option value="Ilala">Ilala</option>
+                                <option value="Kigamboni">kigamboni</option>
+                                <option value="Temeke">Temeke</option>
+                                <option value="kinondoni">Kinondoni</option>
                             </select>
                             <small  class="text-danger">
                                 @error('district')
@@ -57,16 +57,16 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="{{ ($column) ? 'col-md-4' : 'col-md-6' }}">
                         <div class="mb-3">
                             <label for="setting-input-1" class="form-label">Property Category <span
                                     class="text-danger">*</span></label>
                             <select class="form-select " wire:model="category">
                                 <option value="">Select category...</option>
-                                <option value="option-1">Office</option>
-                                <option value="option-1">Home</option>
-                                <option value="option-1">Appartment</option>
-                                <option value="option-1">Shop</option>
+                                <option value="Office">Office</option>
+                                <option value="Home">Home</option>
+                                <option value="Appartment">Appartment</option>
+                                <option value="Shop">Shop</option>
                             </select>
                             <small  class="text-danger">
                                 @error('category')
@@ -75,14 +75,14 @@
                             </small>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="{{ ($column) ? 'col-md-4' : 'col-md-6' }}">
                         <div class="mb-3">
                             <label for="setting-input-1" class="form-label">Purpose <span
                                     class="text-danger">*</span></label>
                             <select class="form-select " wire:model="purpose">
                                 <option value="">Select Purpose...</option>
-                                <option value="option-1">For Rent</option>
-                                <option value="option-1">For Sell</option>
+                                <option value="For Rent">For Rent</option>
+                                <option value="For Sell">For Sell</option>
                             </select>
                             <small  class="text-danger">
                                 @error('purpose')
@@ -91,7 +91,7 @@
                             </small>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="{{ ($column) ? 'col-md-4' : 'd-none' }}">
                         <label for="setting-input-1" class="form-label">Renting Period <span
                             class="text-danger">*</span></label>
                         <div class="row">
@@ -109,11 +109,11 @@
                             <div class="col-md-5">
                                 <div class="mb-3">
                                     <select class="form-select " wire:model="rent_measure">
-                                        <option value="option-1">Month</option>
-                                        <option value="option-1">Year</option>
-                                        <option value="option-1">Week</option>
-                                        <option value="option-1">day</option>
-                                        <option value="option-1">hours</option>
+                                        <option value="month">Month</option>
+                                        <option value="year">Year</option>
+                                        <option value="week">Week</option>
+                                        <option value="day">day</option>
+                                        <option value="hour">hours</option>
                                     </select>
                                     <small  class="text-danger">
                                         @error('rent_measure')
@@ -126,7 +126,6 @@
                     </div>
                 </div>
                 
-
                 <div class="row">
                     <div class="col-md-6">
                         <div class="mb-3">

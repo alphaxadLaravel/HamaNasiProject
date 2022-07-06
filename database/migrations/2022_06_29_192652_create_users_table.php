@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('password');
             $table->string('phone');
             $table->string('role');
+            $table->string('profile');
             $table->string('status')->default('active');
             $table->timestamps();
         });

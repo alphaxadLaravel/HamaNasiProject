@@ -27,60 +27,17 @@
 
 				<div class="app-utilities col-auto">
 					<div class="app-utility-item app-notifications-dropdown dropdown">
-						<a class="dropdown-toggle no-toggle-arrow" id="notifications-dropdown-toggle"
-							data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false"
-							title="Notifications">
-							
-							<i class="mdi mdi-heart fs-4" width="1em" height="1em" viewBox="0 0 16 16" aria-hidden="true"></i>
-							<span class="icon-badge">3</span>
-						</a>
-
-						<div class="dropdown-menu p-0" aria-labelledby="notifications-dropdown-toggle">
-							<div class="dropdown-menu-header p-3">
-								<h5 class="dropdown-menu-title mb-0">My Bookings</h5>
-							</div>
-							<div class="dropdown-menu-content">
-								<div class="item p-3">
-									<div class="row gx-2 justify-content-between align-items-center">
-										<div class="col-auto">
-											<img class="profile-image rounded"
-												src="{{asset('images/property-2.jpg')}}"  alt="">
-										</div>
-										<div class="col">
-											<div class="info">
-												<div class="desc">Grill Apartment</div>
-												<div class="meta"> +1</div>
-											</div>
-										</div>
-										
-									</div>
-									<div class="row gx-2 justify-content-between align-items-center mt-2">
-										<div class="col-auto">
-											<img class="profile-image rounded"
-												src="{{asset('images/property-2.jpg')}}" alt="">
-										</div>
-										<div class="col">
-											<div class="info">
-												<div class="desc">Gold Tower Cotters</div>
-												<div class="meta"> +2</div>
-											</div>
-										</div>
-										
-									</div>
-									<a class="link-mask" href="/my_bookings"></a>
-								</div>
-							</div>
-
-							<div class="dropdown-menu-footer p-2 text-center">
-								<a href="/my_bookings">All Bookings</a>
-							</div>
-
-						</div>
+						@if (session()->get('user')['role'] == "normal_user")
+							<a class="dropdown-toggle no-toggle-arrow" href="#">
+								<i class="mdi mdi-heart fs-4" width="1em" height="1em" viewBox="0 0 16 16" aria-hidden="true"></i>
+								<span class="icon-badge">3</span>
+							</a>
+						@endif
 					</div>
 
 					<div class="app-utility-item app-user-dropdown dropdown">
 						<a class="dropdown-toggle" id="user-dropdown-toggle" data-bs-toggle="dropdown" href="#"
-							role="button" aria-expanded="false"><img src="{{asset('images/mbuto.jpg')}}"
+							role="button" aria-expanded="false"><img src="{{asset(session()->get('user')['profile'])}}"
 								alt="user profile" class="rounded-circle"></a>
 						<ul class="dropdown-menu" aria-labelledby="user-dropdown-toggle">
 							<li><a class="dropdown-item" href="/profile">Profile</a></li>

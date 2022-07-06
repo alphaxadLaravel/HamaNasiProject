@@ -111,21 +111,15 @@
     <h1 class="app-page-title text-muted my-4"><i class="mdi mdi-home-modern"></i> Explore <span class="text-primary">Houses</span></h1>
 
     <div class="row g-4">
-        @for ($i = 0; $i < 3; $i++)
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
-                <div class="card border-0 shadow-sm rounded overflow-hidden">
-                    <div class="position-relative overflow-hidden">
-                        <a href="/property"><img class="img-fluid" height="250px" src="{{asset('images/property-1.jpg')}}" alt=""></a>
-                        <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Sell</div>
-                        <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Appartment</div>
-                    </div>
-                    <div class="p-4 pb-0">
-                        <h5 class="text-primary mb-3">$12,345</h5>
-                        <a class="d-block h5 mb-2" href="/property">Golden Urban House For Sell</a>
-                        <p><i class="fa fa-map-marker-alt text-primary me-2"></i>123 Street, Dar-es-Salaam, TZ</p>
-                    </div>
-                </div>
-            </div>
+        @for ($i = 0; $i < 4; $i++)
+            @component('components.reusablecard',[
+                'type'=>'Office',
+                'price'=>'200,000',
+                'location'=>'Dar-es-Salaam',
+                'status'=>'For Sale',
+                'image'=>'images/property-3.jpg',
+            ]);
+            @endcomponent
         @endfor
         
         <div class="col-12 text-center wow fadeInUp" data-wow-delay="0.1s" style="visibility: hidden; animation-delay: 0.1s; animation-name: none;">
@@ -136,20 +130,15 @@
     <h1 class="app-page-title text-muted "><i class="mdi mdi-home-modern"></i> Explore <span class="text-primary">Transports</span></h1>
 
     <div class="row g-4">
-        @for ($i = 0; $i < 3; $i++)
-        <div class="col-lg-4 col-md-6">
-            <div class="property-item rounded overflow-hidden">
-                <div class="position-relative overflow-hidden">
-                    <a href="/transport_details"><img class="img-fluid w-100" height="250px" src="{{asset('images/pick1.jpg')}}" alt=""></a>
-                    <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Pickup</div>
-                </div>
-                <div class="p-4 pb-0">
-                    <h5 class="text-primary mb-3">$12,345</h5>
-                    <a class="d-block h5 mb-2" href="">Pickup Trans Shift</a>
-                    <p><i class="fa fa-map-marker-alt text-primary me-2"></i>123 Street, Dar-es-Salaam, TZ</p>
-                </div>
-            </div>
-        </div>
+        @for ($i = 0; $i < 4; $i++)
+            @component('components.reusable-transport',
+                [
+                    'type' => 'Lory',
+                    'price' => '200,000',
+                    'location' => 'Dar-es-Salaam',
+                    'image' => 'images/truck1.jpg',
+                ])
+            @endcomponent
         @endfor
     </div>
 

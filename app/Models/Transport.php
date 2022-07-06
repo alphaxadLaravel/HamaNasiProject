@@ -5,24 +5,21 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class House extends Model
+class Transport extends Model
 {
     use HasFactory;
-
     // users table here
-    protected $table = "houses";
+    protected $table = "transports";
 
     // allow the fillable columns in users table
     protected $fillable = [
-        'regNumber',
+        'plate',
         'region',
         'user_id',
         'district',
-        'category',
-        'purpose',
-        'rent_period',
+        'type',
         'price',
-        'photos',
+        'photo',
         'description',
     ];
 

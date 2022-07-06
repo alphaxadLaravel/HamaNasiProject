@@ -29,7 +29,8 @@ class GateController extends Controller
                     'password' => request('password'),
                     'role' => request('agent_type'),
                     'phone' => request('phone'),
-                    'status' => "agent",
+                    'status' => "pending...",
+                    'profile' => "profiles/avatar.jpg",
                 ]);
 
                 session()->flash('success_signup', '');
@@ -64,7 +65,9 @@ class GateController extends Controller
                     'password' => request('password'),
                     'role' => "normal_user",
                     'phone' => request('phone'),
-                    'status' => "user",
+                    'status' => "Allowed..",
+                    'profile' => "profiles/avatar.jpg",
+
                 ]);
 
                 session()->flash('success_signup', '');
@@ -100,11 +103,22 @@ class GateController extends Controller
             
             session()->flash('login_error','');
             return redirect('/login');
+        }elseif($check->status == "Blocked..." || $check->status == "pending..."){
+            
+            session()->flash('approove','');
+            return redirect('/login');
+
         }
-        elseif($check->role == "transport_agent" || $check->role == "house_agent" || $check->role == "normal_user"){
+        elseif($check->role == "transport_agent" || $check->role == "house_agent" || $check->role == "admin"){
             
             request()->session()->put('user',$check);
+            return redirect('/dashboard');
+
+        }elseif($check->role == "normal_user"){
+
+            request()->session()->put('user',$check);
             return redirect('/home');
+
         }
 
 

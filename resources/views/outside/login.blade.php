@@ -12,19 +12,24 @@
 
                     <div class="auth-form-container text-start mx-auto">
                         <form method="POST" action="/login_users" class="auth-form auth-signup-form">
-							@csrf
+                            @csrf
                             @if (Session::has('success_signup'))
                                 <div class="alert alert-success alert-dismissible" role="alert">
                                     <small>Successfully registered!, Please Login!</small>
                                 </div>
                             @endif
-							@if (Session::has('login_error'))
+                            @if (Session::has('login_error'))
                                 <div class="alert alert-danger alert-dismissible" role="alert">
                                     <small>Wrong Username or Password!</small>
                                 </div>
                             @endif
+                            @if (Session::has('approove'))
+                                <div class="alert alert-warning alert-dismissible" role="alert">
+                                    <small>Please Wait for Account Approoval!</small>
+                                </div>
+                            @endif
                             <div class="email mb-2">
-								<small class="text-muted">Username</small>
+                                <small class="text-muted">Username</small>
                                 <input name="username" type="text" class="form-control">
                                 <small class="text-danger">
                                     @error('username')
@@ -34,14 +39,14 @@
                             </div>
 
                             <div class="password mb-2">
-								<small class="text-muted"> Password</small>
-								<input id="signup-password" name="password" type="password"
-									class="form-control signup-password">
-								<small class="text-danger">
-									@error('password')
-										{{ $message }}
-									@enderror
-								</small>
+                                <small class="text-muted"> Password</small>
+                                <input id="signup-password" name="password" type="password"
+                                    class="form-control signup-password">
+                                <small class="text-danger">
+                                    @error('password')
+                                        {{ $message }}
+                                    @enderror
+                                </small>
                             </div>
                             <div class="extra mt-3 row justify-content-between">
                                 <div class="col-6">

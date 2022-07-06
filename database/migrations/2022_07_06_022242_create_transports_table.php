@@ -13,16 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('houses', function (Blueprint $table) {
+        Schema::create('transports', function (Blueprint $table) {
             $table->id();
-            $table->string('regNumber');
+            $table->string('plate');
             $table->bigInteger('user_id')->unsigned()->nullable();
             $table->string('region');
             $table->string('district');
-            $table->string('category');
-            $table->string('purpose');
-            $table->string('rent_period')->default("not for Rent");
-            $table->longText('photos');
+            $table->string('type');
+            $table->longText('photo');
             $table->string('price');
             $table->longText('description');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
@@ -37,6 +35,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('houses');
+        Schema::dropIfExists('transports');
     }
 };
