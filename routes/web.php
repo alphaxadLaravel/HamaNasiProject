@@ -30,8 +30,8 @@ Route::get('/home', function () {
     return view('common.dashboard');
 });
 
-// House for sell
-Route::get('/houses', function () {
+// Show all houses here
+Route::get('/all_houses', function () {
     return view('users.houses');
 });
 

@@ -25,30 +25,20 @@
     </div>
 
     <div class="row g-4 mt-4">
-        @for ($i = 0; $i < 8; $i++)
+        @foreach ($all_transports as $transport)
             @component('components.reusable-transport',
                 [
-                    'type' => 'Lory',
-                    'price' => '200,000',
-                    'location' => 'Dar-es-Salaam',
-                    'image' => 'images/truck1.jpg',
+                    'type' => ucwords($transport->type),
+                    'price' => number_format($transport->price),
+                    'location' => ucwords($transport->district.", ".$transport->region),
+                    'image' => $transport->photo,
                 ])
             @endcomponent
-        @endfor
+        @endforeach
+
         <div class="d-flex justify-content-center">
             <nav class="app-pagination my-3">
-                <ul class="pagination justify-content-center">
-                    <li class="page-item disabled">
-                        <a class="page-link" href="#" tabindex="-1" aria-disabled="true"><i
-                                class="mdi mdi-chevron-double-left"></i></a>
-                    </li>
-                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                    <li class="page-item">
-                        <a class="page-link" href="#"><i class="mdi mdi-chevron-double-right"></i></a>
-                    </li>
-                </ul>
+               {{$all_transports}}
             </nav>
         </div>
 

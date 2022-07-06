@@ -89,7 +89,7 @@
                             </div>
                         </form>
                         <div class="auth-option text-center pt-5">Have an Account? <a class="text-link" href="/login">Login
-                                Here! </a>| Signup as an <a href="/agent_signup">Agent!</a></div>
+                                Here! </a>| Signup as a <a href="/signup">Member!</a></div>
                     </div>
                 </div>
 

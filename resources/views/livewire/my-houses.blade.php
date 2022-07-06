@@ -38,7 +38,7 @@
                                         <td class="cell"><span class="truncate">{{ucfirst($house->description)}}</span></td>
                                         <td class="cell"><span class="truncate">{{ucwords($house->district.", ".$house->region)}}</span></td>
                                         <td class="cell"><span class="truncate text-success">{{number_format($house->price)}} /=</span></td>
-                                        <td class="cell d-inline-flex">
+                                        <td class="">
                                             <a class="mx-2 btn-sm btn app-btn-secondary" href="#"><i
                                                     class="mdi mdi-delete text-danger "></i></a>
                                             <a class="btn-sm btn app-btn-secondary" href="/update"><i

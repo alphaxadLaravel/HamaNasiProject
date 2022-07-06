@@ -2,7 +2,7 @@
 style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
 <div class="card border-0 shadow-sm rounded overflow-hidden">
     <div class="position-relative overflow-hidden">
-        <a href="/property"><img class="img-fluid" height="250px" src="{{ asset($image) }}" alt=""></a>
+        <a href="/property"><img class="img-fluid w-100" style="height: 250px" src="{{ asset('storage/'.$image) }}" alt=""></a>
         <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">{{$type}}</div>
     </div>
     

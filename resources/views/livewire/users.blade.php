@@ -82,7 +82,10 @@
         </div>
 
         <div class="d-flex justify-content-center">
-            {{ $users->links() }}
+
+            <nav class="app-pagination my-3">
+                {{ $users->links() }}
+             </nav>
         </div>
 
     </div>

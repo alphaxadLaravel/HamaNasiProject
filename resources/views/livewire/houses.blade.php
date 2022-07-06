@@ -22,32 +22,24 @@
     </div>
 
     <div class="row g-4 mt-4">
-        @for ($i = 0; $i < 8; $i++)
 
-            @component('components.reusablecard',[
-                'type'=>'Office',
-                'price'=>'200,000',
-                'location'=>'Dar-es-Salaam',
-                'status'=>'For Sale',
-                'image'=>'images/property-3.jpg',
-            ]);
-            @endcomponent
+        @foreach ($all_houses as $house)
+        @component('components.reusablecard',[
+            'type'=>ucfirst($house->category),
+            'price'=>number_format($house->price),
+            'location'=>ucwords($house->district.", ".$house->region),
+            'status'=>ucwords($house->purpose),
+            'image'=>$house->photos,
+        ]);
+        @endcomponent
+        @endforeach
+
+           
     
-        @endfor      
         
         <div class="d-flex justify-content-center">
             <nav class="app-pagination my-3">
-                <ul class="pagination justify-content-center">
-                    <li class="page-item disabled">
-                        <a class="page-link" href="#" tabindex="-1" aria-disabled="true"><i class="mdi mdi-chevron-double-left"></i></a>
-                    </li>
-                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                    <li class="page-item">
-                        <a class="page-link" href="#"><i class="mdi mdi-chevron-double-right"></i></a>
-                    </li>
-                </ul>
+               {{$all_houses->links()}}
             </nav>
         </div>
         
