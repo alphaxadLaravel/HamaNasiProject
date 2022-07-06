@@ -38,7 +38,7 @@
 
         <div class="d-flex justify-content-center">
             <nav class="app-pagination my-3">
-               {{$all_transports}}
+               {{$all_transports->links()}}
             </nav>
         </div>
 
