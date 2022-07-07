@@ -26,4 +26,9 @@ class House extends Model
         'description',
     ];
 
+    // The House belongs to House Agent
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
+
 }

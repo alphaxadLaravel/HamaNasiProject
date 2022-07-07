@@ -23,6 +23,9 @@ class DashboardController extends Controller
         // count the Transports
         $my_vehicles = Transport::all()->where('user_id', $user_id)->count();
 
+        // Count all transports here
+        $all_transports = Transport::all()->count();
+
         // Count All houses here
         $all_houses = House::all()->count();
 
@@ -31,6 +34,7 @@ class DashboardController extends Controller
             'my_houses'=>$my_houses,
             'all_houses'=>$all_houses,
             'my_vehicles'=>$my_vehicles,
+            'all_transports'=>$all_transports,
         ]);
     }
 }

@@ -1,7 +1,8 @@
 @extends('layouts.app')
 
 @section('pages')
-    <h1 class="app-page-title text-muted">👋 Hi, <span class="text-success">{{ucfirst(session()->get('user')['username'])}}!</span></h1>
+    <h1 class="app-page-title text-muted">👋 Hi, <span
+            class="text-success">{{ ucfirst(session()->get('user')['username']) }}!</span></h1>
 
     <div class="row g-4">
 
@@ -108,38 +109,45 @@
         </div>
 
     </div>
-    <h1 class="app-page-title text-muted my-4"><i class="mdi mdi-home-modern"></i> Explore <span class="text-primary">Houses</span></h1>
+    <h1 class="app-page-title text-muted my-4"><i class="mdi mdi-home-modern"></i> Explore <span
+            class="text-primary">Houses</span></h1>
 
     <div class="row g-4">
-        @for ($i = 0; $i < 4; $i++)
-            @component('components.reusablecard',[
-                'type'=>'Office',
-                'price'=>'200,000',
-                'location'=>'Dar-es-Salaam',
-                'status'=>'For Sale',
-                'image'=>'images/property-3.jpg',
-            ]);
+
+        @foreach ($sample_houses as $sample)
+            @component('components.reusablecard',
+                [
+                    'type' => ucwords($sample->type),
+                    'price' => number_format($sample->price),
+                    'location' => ucwords($sample->district . ', ' . $sample->region),
+                    'status' => ucwords($sample->purpose),
+                    'image' => $sample->photos,
+                ])
+                ;
             @endcomponent
-        @endfor
-        
-        <div class="col-12 text-center wow fadeInUp" data-wow-delay="0.1s" style="visibility: hidden; animation-delay: 0.1s; animation-name: none;">
+        @endforeach
+
+
+        <div class="col-12 text-center wow fadeInUp" data-wow-delay="0.1s"
+            style="visibility: hidden; animation-delay: 0.1s; animation-name: none;">
             <a class="btn btn-primary py-3 px-5" href="">Browse More Property</a>
         </div>
     </div>
 
-    <h1 class="app-page-title text-muted "><i class="mdi mdi-home-modern"></i> Explore <span class="text-primary">Transports</span></h1>
+    <h1 class="app-page-title text-muted "><i class="mdi mdi-home-modern"></i> Explore <span
+            class="text-primary">Transports</span></h1>
 
     <div class="row g-4">
-        @for ($i = 0; $i < 4; $i++)
+        @foreach ($sample_transports as $sample)
             @component('components.reusable-transport',
                 [
-                    'type' => 'Lory',
-                    'price' => '200,000',
-                    'location' => 'Dar-es-Salaam',
-                    'image' => 'images/truck1.jpg',
+                    'type' => ucwords($sample->type),
+                    'price' => number_format($sample->price),
+                    'location' => ucwords($sample->district . ', ' . $sample->region),
+                    'image' => $sample->photo,
                 ])
             @endcomponent
-        @endfor
-    </div>
+        @endforeach
 
+    </div>
 @endsection

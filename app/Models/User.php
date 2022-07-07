@@ -23,5 +23,10 @@ class User extends Model
     'status',
     ];
 
+    // One House Agent has many houses
+    public function house(){
+        return $this->hasMany(House::class);
+    }
+
     
 }

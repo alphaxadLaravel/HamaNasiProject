@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GateController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\HomeController;
 
 
 // Welcome Page here
@@ -25,10 +26,9 @@ Route::get('/login', function () {
     return view('outside.login');
 });
 
-// Welcome Page route here
-Route::get('/home', function () {
-    return view('common.dashboard');
-});
+// Users Dashboard Home Page
+Route::get('/home',[HomeController::class,'homeSamples']);
+
 
 // Show all houses here
 Route::get('/all_houses', function () {

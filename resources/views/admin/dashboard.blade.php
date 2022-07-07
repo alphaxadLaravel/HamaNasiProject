@@ -11,7 +11,7 @@
                     <h4 class="stats-type mb-1">Total users</h4>
                     <div class="stats-figure">{{$user_count}}</div>
                 </div>
-                <a class="app-card-link-mask" href="/admin_users"></a>
+                <a class="app-card-link-mask" href="/users"></a>
             </div>
         </div>
 
@@ -28,7 +28,7 @@
             <div class="app-card app-card-stat shadow-sm h-100">
                 <div class="app-card-body p-3 p-lg-4">
                     <h4 class="stats-type mb-1">Total Transports</h4>
-                    <div class="stats-figure">0</div>
+                    <div class="stats-figure">{{$all_transports}}</div>
                 </div>
                 <a class="app-card-link-mask" href="/admin_transport"></a>
             </div>
