@@ -30,6 +30,7 @@
             'location'=>ucwords($house->district.", ".$house->region),
             'status'=>ucwords($house->purpose),
             'image'=>$house->photos,
+            'id'=>$house->id,
         ]);
         @endcomponent
         @endforeach

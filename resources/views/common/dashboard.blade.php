@@ -122,6 +122,7 @@
                     'location' => ucwords($sample->district . ', ' . $sample->region),
                     'status' => ucwords($sample->purpose),
                     'image' => $sample->photos,
+                    'id'=>$sample->id
                 ])
                 ;
             @endcomponent
@@ -145,6 +146,7 @@
                     'price' => number_format($sample->price),
                     'location' => ucwords($sample->district . ', ' . $sample->region),
                     'image' => $sample->photo,
+                    'id'=>$sample->id
                 ])
             @endcomponent
         @endforeach

@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GateController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PropertyController;
 
 
 // Welcome Page here
@@ -55,15 +56,14 @@ Route::get('/checkout', function () {
     return view('users.checkout');
 });
 
-// House details
-Route::get('/property', function () {
-    return view('users.house_details');
-});
 
-// My wish list here
-Route::get('/my_wishlist', function () {
-    return view('users.my_wishlist');
-});
+// get single house here
+Route::get('/property/{id}',[PropertyController::class,'showProduct']);
+
+
+// My wishlist here
+Route::get('/my_wishlist/{id}',[PropertyController::class,'myWishList']);
+
 
 // profile route here
 Route::get('/profile', function () {
