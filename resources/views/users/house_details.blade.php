@@ -42,8 +42,8 @@
                             </span> 
                             </div>
                             <div class="col-8">
-                                <span class="text-muted fw-bold"> <span
-                                    class="text-danger">{{ number_format($single_house->price) }}/= </span> 
+                                <span class=""> <span
+                                    class="text-success">{{ number_format($single_house->price) }}/= </span> 
                             </span><span>
                                 @if ($single_house->purpose == "For Rent")
                                     @ {{$single_house->rent_period}}
@@ -58,8 +58,8 @@
                             </span> 
                             </div>
                             <div class="col-8">
-                                <span class="text-muted fw-bold"> <span
-                                    class="text-danger">{{ ucwords($single_house->purpose) }} </span>
+                                <span class=" "> <span
+                                    class="text-success">{{ ucwords($single_house->purpose) }} </span>
                             </span> <br>
                             </div>
                         </div>
@@ -69,8 +69,8 @@
                             </span> 
                             </div>
                             <div class="col-8">
-                                <span class="text-muted fw-bold"> <span
-                                    class="text-danger">{{ ucwords($single_house->district.", ".$single_house->region) }} </span>
+                                <span class=""> <span
+                                    class="text-success">{{ ucwords($single_house->district.", ".$single_house->region) }} </span>
                             </span> <br>
                             </div>
                         </div>
@@ -79,9 +79,6 @@
 
                         {{-- <br><span class="fw-bold">Other Photos: 👇</span> <br> --}}
                         <div class="row gy-3 my-2">
-                            <div class="col-md-6 px-3">
-                                <a class="app-btn-secondary btn w-100" href="/my_wishlist/{{$single_house->id}}"><i class="mdi mdi-heart-pulse"></i> Add to whishlist</a>
-                            </div>
                             <div class="col-md-6 px-3">
                                 <a class="app-btn-secondary btn w-100" href="/go_book/{{$single_house->id}}"><i class="mdi mdi-book-plus"></i> Book this house Now</a>
                             </div>
