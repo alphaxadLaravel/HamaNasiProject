@@ -243,10 +243,19 @@
                         </a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link {{ request()->is('my_payments') ? 'active' : '' }}"
+                            href="/my_payments">
+                            <span class="nav-icon">
+                                <i class="mdi mdi-check-all"></i>
+                            </span>
+                            <span class="nav-link-text">Payments Made</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link {{ request()->is('my_wishlist') ? 'active' : '' }}"
                             href="/my_wishlist">
                             <span class="nav-icon">
-                                <i class="mdi mdi-heart"></i>
+                                <i class="mdi mdi-heart-pulse"></i>
                             </span>
                             <span class="nav-link-text">My WishList</span>
                         </a>

@@ -1,6 +1,5 @@
 @extends('layouts.app')
 
 @section('pages')
-   @livewire('wish-list')
-
+   @livewire('wish-lists')
 @endsection

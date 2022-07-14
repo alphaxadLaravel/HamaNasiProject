@@ -29,8 +29,8 @@
 					<div class="app-utility-item app-notifications-dropdown dropdown">
 						@if (session()->get('user')['role'] == "normal_user")
 							<a class="dropdown-toggle no-toggle-arrow" href="#">
-								<i class="mdi mdi-heart fs-4" width="1em" height="1em" viewBox="0 0 16 16" aria-hidden="true"></i>
-								<span class="icon-badge">3</span>
+								<i class="mdi mdi-heart-pulse fs-4" width="1em" height="1em" viewBox="0 0 16 16" aria-hidden="true"></i>
+								<span class="icon-badge">0</span>
 							</a>
 						@endif
 					</div>

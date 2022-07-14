@@ -28,5 +28,10 @@ class User extends Model
         return $this->hasMany(House::class);
     }
 
+    // users wishlist
+    public function wish(){
+        return $this->hasMany(WishList::class);
+    }
+
     
 }

@@ -31,4 +31,9 @@ class House extends Model
         return $this->belongsTo(User::class);
     }
 
+    // House can be wished many times
+    public function wish(){
+        return $this->hasMany(WishList::class);
+    }
+
 }

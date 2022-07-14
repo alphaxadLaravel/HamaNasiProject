@@ -51,6 +51,12 @@ Route::get('/my_bookings', function () {
     return view('users.my_bookings');
 });
 
+// My payments i made
+Route::get('/my_payments', function () {
+    return view('users.my_payments');
+});
+
+
 // The checkoutr route here
 Route::get('/checkout', function () {
     return view('users.checkout');
@@ -61,9 +67,13 @@ Route::get('/checkout', function () {
 Route::get('/property/{id}',[PropertyController::class,'showProduct']);
 
 
-// My wishlist here
+// add wish list here
 Route::get('/my_wishlist/{id}',[PropertyController::class,'myWishList']);
 
+// go to wish list age here
+Route::get('/my_wishlist', function () {
+    return view('users.my_wishlist');
+});
 
 // profile route here
 Route::get('/profile', function () {

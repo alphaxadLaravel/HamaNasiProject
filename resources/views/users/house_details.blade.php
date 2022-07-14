@@ -74,6 +74,14 @@
                         {{-- <span class="text-muted fw-bold">Rent Duration: <span class="text-danger">6 Month </span></span> --}}
 
                         {{-- <br><span class="fw-bold">Other Photos: 👇</span> <br> --}}
+                        <div class="row gy-3 my-2">
+                            <div class="col-md-6 px-3">
+                                <a class="app-btn-secondary btn w-100" href="/my_wishlist/{{$single_house->id}}"><i class="mdi mdi-heart-pulse"></i> Add to whishlist</a>
+                            </div>
+                            <div class="col-md-6 px-3">
+                                <a class="app-btn-secondary btn w-100" href="/my_wishlist/{{$single_house->id}}"><i class="mdi mdi-book-plus"></i> Book this house Now</a>
+                            </div>
+                        </div>
 
                         <div class="row mt-3 d-flex align-items-center justify-content-between">
                             {{-- <div class="">
@@ -86,9 +94,10 @@
                                 <img src="{{ asset('images/property-1.jpg') }}" width="60px" height="60px"
                                     class="rounded" style="cursor: pointer;">
                             </div> --}}
-                            <div class="col-md-4 my-4">
+                            {{-- <div class="col-md-4 my-4 d-flex ">
                                 <a class="app-btn-secondary btn w-100" href="/my_wishlist/{{$single_house->id}}">❤ Add to whishlist</a>
-                            </div>
+                                <a class="app-btn-secondary btn w-100" href="/my_wishlist/{{$single_house->id}}">❤ Add to whishlist</a>
+                            </div> --}}
                         </div>
                     </div>
                 </div>
