@@ -43,7 +43,11 @@
                             </div>
                             <div class="col-8">
                                 <span class="text-muted fw-bold"> <span
-                                    class="text-danger">{{ number_format($single_house->price) }}/= </span>
+                                    class="text-danger">{{ number_format($single_house->price) }}/= </span> 
+                            </span><span>
+                                @if ($single_house->purpose == "For Rent")
+                                    @ {{$single_house->rent_period}}
+                                @endif
                             </span> <br>
                             </div>
                         </div>
@@ -79,7 +83,7 @@
                                 <a class="app-btn-secondary btn w-100" href="/my_wishlist/{{$single_house->id}}"><i class="mdi mdi-heart-pulse"></i> Add to whishlist</a>
                             </div>
                             <div class="col-md-6 px-3">
-                                <a class="app-btn-secondary btn w-100" href="/my_wishlist/{{$single_house->id}}"><i class="mdi mdi-book-plus"></i> Book this house Now</a>
+                                <a class="app-btn-secondary btn w-100" href="/go_book/{{$single_house->id}}"><i class="mdi mdi-book-plus"></i> Book this house Now</a>
                             </div>
                         </div>
 

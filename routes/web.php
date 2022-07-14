@@ -75,6 +75,9 @@ Route::get('/my_wishlist', function () {
     return view('users.my_wishlist');
 });
 
+// Go to book now here
+Route::get('/go_book/{id}',[PropertyController::class,'goToBookNow']);
+
 // profile route here
 Route::get('/profile', function () {
     return view('users.profile');

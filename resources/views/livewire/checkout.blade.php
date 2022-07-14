@@ -2,8 +2,12 @@
     <div class="row g-1 my-4 align-items-center justify-content-between">
         <div class="row g-1">
 
+            <div class="col-md-6">
+                jijkjikjkj
+            </div>
+
             @if ($step1)
-                <div class="col-md-12">
+                <div class="col-md-6">
                     <div class="app-card app-card-account shadow-sm d-flex flex-column align-items-start">
                         <div class="app-card-header p-3 border-bottom-0">
                             <div class="row align-items-center gx-3">
@@ -122,7 +126,7 @@
                     </div>
                 </div>
             @elseif($step2)
-                <div class="col-md-12">
+                <div class="col-md-6">
                     <div class="app-card app-card-account shadow-sm d-flex flex-column align-items-start">
                         <div class="app-card-header p-3 border-bottom-0">
                             <div class="row align-items-center gx-3">
@@ -185,7 +189,7 @@
                     </div>
                 </div>
             @elseif ($step3)
-                <div class="col-md-12">
+                <div class="col-md-6">
                     <div class="app-card  shadow-sm d-flex flex-column align-items-start">
                         <div class="app-card-header p-3 border-bottom-0">
                             <div class="row align-items-center gx-3">

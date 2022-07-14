@@ -19,6 +19,12 @@
                     <small>Successfully Added one property to Wishlist!</small>
                 </div>
             @endif
+
+            @if (Session::has('exist'))
+                <div class="alert alert-success alert-dismissible" role="alert">
+                    <small>Property Already exist in Wish list!</small>
+                </div>
+            @endif
             <div class="app-card app-card-orders-table shadow-sm mb-5">
                 <div class="app-card-body">
                     <div class="table-responsive">
@@ -36,18 +42,23 @@
                             <tbody>
                                 @foreach ($my_wishlist as $wish)
                                     <tr>
-                                        <td class="cell"><img src="{{ asset('images/property-2.jpg') }}"
+                                        <td class="cell"><img src="{{ asset('storage/'.$wish->house->photos) }}"
                                                 class="img-fluid rounded" height="45px" width="45px" alt="">
                                         </td>
-                                        <td class="cell"><span class="truncate">{{$wish->house->regNumber}}</span></td>
-                                        <td class="cell"><span class="truncate">{{$wish->house->district.", ".$wish->house->region}}</span></td>
-                                        <td class="cell"><span class="truncate text-success">{{$wish->house->category}}</span></td>
-                                        <td class="cell"><span class="truncate">Tsh {{number_format($wish->house->price)}}</span></td>
+                                        <td class="cell"><span class="truncate">{{ $wish->house->regNumber }}</span>
+                                        </td>
+                                        <td class="cell"><span
+                                                class="truncate">{{ $wish->house->district . ', ' . $wish->house->region }}</span>
+                                        </td>
+                                        <td class="cell"><span
+                                                class="truncate text-success">{{ $wish->house->category }}</span></td>
+                                        <td class="cell"><span class="truncate">Tsh
+                                                {{ number_format($wish->house->price) }}</span></td>
                                         <td class="">
                                             <a class="mx-2 btn-sm btn app-btn-secondary" href="#"><i
                                                     class="mdi mdi-delete text-danger"></i>Remove</a>
-                                                    <a class="btn-sm btn app-btn-secondary" href="#"><i
-                                                        class="mdi mdi-book-plus text-success"></i>Book Now</a>
+                                            <a class="btn-sm btn app-btn-secondary" href="#"><i
+                                                    class="mdi mdi-book-plus text-success"></i>Book Now</a>
                                         </td>
                                     </tr>
                                 @endforeach
