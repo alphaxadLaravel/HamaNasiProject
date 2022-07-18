@@ -1,7 +1,7 @@
 <div>
     <div class="row g-3 mb-4 align-items-center justify-content-between">
         <div class="col-auto">
-            <h1 class="app-page-title mb-0"><i class="mdi mdi-home-modern text-danger"></i> My Houses!</h1>
+            <h5 class=" mb-0"><i class="mdi mdi-home-modern text-danger"></i> My Houses!</h5>
         </div>
 
         <div class="row g-4">

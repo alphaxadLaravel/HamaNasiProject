@@ -1,7 +1,7 @@
 <div>
     <div class="row g-3 mb-4 align-items-center justify-content-between">
         <div class="col-auto">
-            <h4 class="app-page-title mb-0"><i class="mdi mdi-truck-fast text-success"></i> Transport Services</h4>
+            <h5 class="mb-0"><i class="mdi mdi-truck-fast text-success"></i> Transport Services</h5>
         </div>
         <div class="col-auto">
             <div class="page-utilities">

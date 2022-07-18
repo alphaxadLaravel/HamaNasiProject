@@ -1,7 +1,7 @@
 <div>
     <div class="row g-3 mb-4 align-items-center justify-content-between">
         <div class="col-auto">
-            <h1 class="app-page-title mb-0"><i class="mdi mdi-truck-fast text-danger"></i> My Vehicles!</h1>
+            <h5 class="mb-0"><i class="mdi mdi-truck-fast text-danger"></i> My Vehicles!</h5>
         </div>
 
         <div class="row g-4">
@@ -9,7 +9,7 @@
                 <div class="app-card-body">
                     @if (Session::has('added_transport'))
                         <div class="alert alert-success alert-dismissible" role="alert">
-                            <small>You have Added New House!</small>
+                            <small>You have Added New Vehicle Successfully!!</small>
                         </div>
                     @endif
                     <div class="table-responsive">
@@ -37,10 +37,8 @@
                                         <td class="cell"><span class="truncate">{{ucwords($vehicle->district.", ".$vehicle->region)}}</span></td>
                                         <td class="cell"><span class="truncate text-success">{{number_format($vehicle->price)}}/=</span></td>
                                         <td class="">
-                                            <a class="mx-2 btn-sm btn app-btn-secondary" href="#"><i
-                                                    class="mdi mdi-delete text-danger "></i></a>
-                                            <a class="btn-sm btn app-btn-secondary" href="/update"><i
-                                                    class="mdi mdi-pencil text-primary "></i></a>
+                                            <a class="mx-2 btn-sm btn app-btn-secondary" href="#"><i class="mdi mdi-delete text-danger "></i></a>
+                                            <a class="btn-sm btn app-btn-secondary" href="/update"><i class="mdi mdi-pencil text-primary "></i></a>
                                         </td>
                                     </tr>
                                 @endforeach

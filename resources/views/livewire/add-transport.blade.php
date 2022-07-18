@@ -1,7 +1,7 @@
 <div>
     <div class="row g-3 mb-4 align-items-center justify-content-between">
         <div class="col-auto">
-            <h1 class="app-page-title mb-0"><i class="mdi mdi-plus text-danger"></i> Add New Vehicle!!</h1>
+            <h5 class=" mb-0"><i class="mdi mdi-plus text-danger"></i> Add New Vehicle!!</h5>
         </div>
         <div class="row g-4">
             <div class="app-card app-card-settings shadow-sm p-4">
@@ -30,10 +30,7 @@
                                             class="text-danger">*</span></label>
                                     <select class="form-select" wire:model="region" id="">
                                         <option>Select the region...</option>
-                                        <option value="Mwanza">Mwanza</option>
-                                        <option value="Dodma">Dodoma</option>
-                                        <option value="Kigoma">Kigoma</option>
-                                        <option>Dar</option>
+                                        <option value="Dar">Dar</option>
                                     </select>
                                     <small class="text-danger">
                                         @error('region')
@@ -52,6 +49,7 @@
                                         <option value="Kigamboni">kigamboni</option>
                                         <option value="Temeke">Temeke</option>
                                         <option value="kinondoni">Kinondoni</option>
+                                        <option value="Kimara">Kimara</option>
                                     </select>
                                     <small class="text-danger">
                                         @error('district')

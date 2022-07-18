@@ -40,8 +40,8 @@
                                 <small class="text-muted">Agent Type</small>
                                 <select class="form-select " name="agent_type">
                                     <option value="">Select Type of Agent...</option>
-                                    <option value="house_agent">House Agent</option>
-                                    <option value="transport_agent">Transport Agent</option>
+                                    <option value="House Agent">House Agent</option>
+                                    <option value="Transport Agent">Transport Agent</option>
                                 </select>
                                 <small class="text-danger">
                                     @error('agent_type')

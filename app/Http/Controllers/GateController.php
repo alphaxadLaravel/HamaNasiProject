@@ -33,7 +33,7 @@ class GateController extends Controller
                     'profile' => "profiles/avatar.jpg",
                 ]);
 
-                session()->flash('success_signup', '');
+                session()->flash('approove', '');
                 return redirect('/login');
             } else {
 
@@ -63,11 +63,10 @@ class GateController extends Controller
                     'fullname' => request('fullname'),
                     'username' => request('username'),
                     'password' => request('password'),
-                    'role' => "normal_user",
+                    'role' => "Normal User",
                     'phone' => request('phone'),
                     'status' => "Allowed..",
                     'profile' => "profiles/avatar.jpg",
-
                 ]);
 
                 session()->flash('success_signup', '');

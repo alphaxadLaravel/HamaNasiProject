@@ -2,7 +2,7 @@
     {{-- All normal users here --}}
     <div class="row g-3 mb-4 align-items-center justify-content-between">
         <div class="col-auto">
-            <h1 class="app-page-title mb-0"><i class="mdi mdi-account-multiple"></i> All Users</h1>
+            <h5 class=" mb-0"><i class="mdi mdi-account-multiple"></i> All Users</h5>
         </div>
         <div class="col-auto">
             <div class="page-utilities">
@@ -53,7 +53,7 @@
                             @foreach ($users as $user)
                                 <tr>
                                     <td class="cell"><img src="{{ asset($user->profile) }}"
-                                            class="img-fluid rounded-circle" height="40px" width="40px" alt=""></td>
+                                            class="img-fluid rounded-circle" height="30px" width="30px" alt=""></td>
                                     <td class="cell"><span class="truncate">{{ ucwords($user->username) }} </span>
                                     </td>
                                     <td class="cell"><span class="truncate">{{ ucwords($user->fullname) }}</span>
@@ -62,15 +62,15 @@
                                     <td class="cell"><span
                                             class="truncate text-success">{{ ucwords($user->role) }}</span></td>
                                     <td class="cell"><span
-                                            class="truncate text-danger">{{ ucwords($user->status) }}</span></td>
+                                            class="truncate {{($user->status == "Blocked...") ? 'text-danger':'text-success'}}">{{ ucwords($user->status) }}</span></td>
 
-                                    <td class="">
+                                    <td>
                                         <button class="mx-2 btn-sm btn app-btn-secondary" data-toggle="tooltip"
                                             data-placement="top" title="Block This User"
-                                            wire:click="block({{ $user->id }})">🚫</button>
+                                            wire:click="block({{ $user->id }})"><i class="mdi mdi-block-helper"></i></button>
                                         <button class="mx-2 btn-sm btn app-btn-secondary" data-toggle="tooltip"
                                             data-placement="top" title="Accept This Agent"
-                                            wire:click="approove({{ $user->id }})">✔</button>
+                                            wire:click="approove({{ $user->id }})"><i class="mdi mdi-check-all"></i></button>
                                     </td>
                                 </tr>
                             @endforeach
