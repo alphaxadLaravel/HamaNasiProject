@@ -33,7 +33,7 @@ class House extends Model
 
     // House can be wished many times
     public function wish(){
-        return $this->hasMany(WishList::class);
+        return $this->hasMany(Booking::class);
     }
 
 }

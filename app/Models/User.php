@@ -30,7 +30,7 @@ class User extends Model
 
     // users wishlist
     public function wish(){
-        return $this->hasMany(WishList::class);
+        return $this->hasMany(Booking::class);
     }
 
     

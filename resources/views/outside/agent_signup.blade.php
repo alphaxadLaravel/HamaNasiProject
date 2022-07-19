@@ -5,7 +5,7 @@
         <div class="col-12 col-md-7 col-lg-6 auth-main-col text-center p-5">
             <div class="d-flex flex-column align-content-end">
                 <div class="app-auth-body mx-auto mt-2">
-                    <div class="app-auth-branding mb-2"><a class="app-logo" href="index.html"><img class="logo-icon me-2"
+                    <div class="app-auth-branding mb-2"><a class="app-logo" href="/"><img class="logo-icon me-2"
                                 src="{{ asset('images/icon-deal.png') }}" alt="logo"></a></div>
                     <h2 class="auth-heading text-center mb-2 text-success"><span class=" d-md-inline">Agent -</span>
                         HamaNasi</h2>

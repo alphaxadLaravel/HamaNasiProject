@@ -24,20 +24,17 @@
     <div class="row g-4 mt-4">
 
         @foreach ($all_houses as $house)
-        @component('components.reusablecard',[
-            'type'=>ucfirst($house->category),
-            'price'=>number_format($house->price),
-            'location'=>ucwords($house->district.", ".$house->region),
-            'status'=>ucwords($house->purpose),
-            'image'=>$house->photos,
-            'id'=>$house->id,
-        ]);
-        @endcomponent
+            @component('components.reusablecard',[
+                'type'=>ucfirst($house->category),
+                'price'=>number_format($house->price),
+                'location'=>ucwords($house->district.", ".$house->region),
+                'status'=>ucwords($house->purpose),
+                'image'=>$house->photos,
+                'id'=>$house->id,
+            ]);
+            @endcomponent
         @endforeach
 
-           
-    
-        
         <div class="d-flex justify-content-center">
             <nav class="app-pagination my-3">
                {{$all_houses->links()}}

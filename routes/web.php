@@ -68,7 +68,7 @@ Route::get('/property/{id}',[PropertyController::class,'showProduct']);
 
 
 // add wish list here
-Route::get('/my_wishlist/{id}',[PropertyController::class,'myWishList']);
+Route::get('/book/{id}',[PropertyController::class,'bookProperty']);
 
 // go to wish list age here
 Route::get('/my_wishlist', function () {

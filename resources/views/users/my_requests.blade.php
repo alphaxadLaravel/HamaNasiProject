@@ -3,7 +3,7 @@
 @section('pages')
 <div class="row g-3 mb-4 align-items-center justify-content-between">
     <div class="col-auto">
-        <h1 class="app-page-title mb-0"><i class="mdi mdi-led-on text-danger"></i> My Requests!</h1>
+        <h1 class=" mb-0"><i class="mdi mdi-led-on text-danger"></i> My Requests!</h1>
     </div>
     <div class="col-auto">
             <div class="page-utilities">

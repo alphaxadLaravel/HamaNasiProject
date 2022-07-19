@@ -80,7 +80,7 @@
                         {{-- <br><span class="fw-bold">Other Photos: 👇</span> <br> --}}
                         <div class="row gy-3 my-2">
                             <div class="col-md-6 px-3">
-                                <a class="app-btn-secondary btn w-100" href="/go_book/{{$single_house->id}}"><i class="mdi mdi-book-plus"></i> Book this house Now</a>
+                                <a class="app-btn-secondary btn w-100" href="/book/{{$single_house->id}}"><i class="mdi mdi-book-plus"></i> Book this house Now</a>
                             </div>
                         </div>
 

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('pages')
-<h1 class="app-page-title"><i class="mdi mdi-account text-success"></i> My Profile</h1>
+<h5 class=""><i class="mdi mdi-account text-success"></i> My Profile</h5>
 <div class="row gy-4">
     <div class="col-12 col-lg-6">
         <div class="app-card app-card-account shadow-sm d-flex flex-column align-items-start">
