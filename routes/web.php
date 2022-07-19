@@ -6,7 +6,6 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PropertyController;
 
-
 // Welcome Page here
 Route::get('/', function () {
     return view('common.index');
@@ -29,7 +28,6 @@ Route::get('/login', function () {
 
 // Users Dashboard Home Page
 Route::get('/home',[HomeController::class,'homeSamples']);
-
 
 // Show all houses here
 Route::get('/all_houses', function () {
@@ -56,16 +54,8 @@ Route::get('/my_payments', function () {
     return view('users.my_payments');
 });
 
-
-// The checkoutr route here
-Route::get('/checkout', function () {
-    return view('users.checkout');
-});
-
-
 // get single house here
 Route::get('/property/{id}',[PropertyController::class,'showProduct']);
-
 
 // add wish list here
 Route::get('/book/{id}',[PropertyController::class,'bookProperty']);
@@ -146,7 +136,6 @@ Route::get('/house_agent_add_house', function () {
     return view('house_agent.new_house');
 });
 
-
 // Register an Agent here
 Route::post('/agent_auth',[GateController::class,'agents']);
 
@@ -159,5 +148,6 @@ Route::post('/login_users',[GateController::class,'login']);
 // Addd new house routr here
 Route::post('/login_users',[GateController::class,'login']);
 
-
+// Go to pay here
+Route::get('/go_pay/{id}',[PropertyController::class,'goToCheckout']);
 

@@ -15,10 +15,7 @@
                 </div>
             </div>
         </div>
-
         @livewire('my-bookings')
-        
-
     </div>
 
     </div>

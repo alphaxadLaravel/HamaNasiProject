@@ -251,15 +251,6 @@
                             <span class="nav-link-text">Payments Made</span>
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link {{ request()->is('checkout') ? 'active' : '' }}"
-                            href="/checkout">
-                            <span class="nav-icon">
-                                <i class="mdi mdi-cash-usd"></i>
-                            </span>
-                            <span class="nav-link-text">Checkout</span>
-                        </a>
-                    </li>
 
                     <li class="nav-item ">
                         <a class="nav-link {{ request()->is('profile') ? 'active' : '' }}" href="/profile">

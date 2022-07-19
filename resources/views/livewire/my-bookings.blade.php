@@ -43,7 +43,7 @@
                                 <td class="cell d-flex">
                                     <a class="mx-2 btn-sm btn app-btn-secondary" href="#"><i
                                             class="mdi mdi-delete text-danger"></i></a>
-                                    <a class="mx-2 btn-sm btn app-btn-secondary" href="#"><i
+                                    <a class="mx-2 btn-sm btn app-btn-secondary" href="/go_pay/{{$booking->house_id}}"><i
                                             class="mdi mdi-check-all text-success"></i>Make payment</a>
                                 </td>
                             </tr>

@@ -35,13 +35,17 @@ class PropertyController extends Controller
 
     }
 
+    public function goToCheckout($id){
+
+        $booked_house = House::where('id',$id)->first();
+        // dd($booked_house);
+        return view('users.checkout',['booked_house'=>$booked_house]);
+    }
+
     // Book the single property here
     public function goToBookNow(){
         dd("Going to Book Now...");
     }
-
-    
-
 
     // show single property here
     public function showProduct($id)

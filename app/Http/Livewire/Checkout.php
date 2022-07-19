@@ -42,6 +42,9 @@ class Checkout extends Component
         $this->step1 = true;
     }
 
+    public function mount($id){
+        // dd("here");
+    }
 
     public function render()
     {

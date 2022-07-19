@@ -9,7 +9,7 @@
             <div class="page-utilities">
                 <div class="row g-2 justify-content-start justify-content-md-end align-items-center">
                     <div class="col-auto">
-                        <a class="btn app-btn-primary" href="/checkout"> <i class="mdi mdi-check-all"></i>
+                        <a class="btn app-btn-primary" href="/go_pay/{{$single_house->id}}"> <i class="mdi mdi-check-all"></i>
                             Checkout Now</a>
                     </div>
                 </div>
