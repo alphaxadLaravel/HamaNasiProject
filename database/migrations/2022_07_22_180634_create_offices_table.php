@@ -13,20 +13,16 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('offices', function (Blueprint $table) {
             $table->id();
-            $table->string('fullname');
-            $table->string('username');
-            $table->string('password');
-            $table->string('phone');
-            $table->string('email');  
-            $table->string('role');
-            $table->string('profile');
-            $table->string('status')->default('active');
+            $table->bigInteger('house_id')->unsigned()->nullable();
+            $table->string('rooms');
+            $table->string('hall');
+            $table->foreign('house_id')->references('id')->on('homes')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
         });
     }
-
+   
     /**
      * Reverse the migrations.
      *
@@ -34,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('offices');
     }
 };

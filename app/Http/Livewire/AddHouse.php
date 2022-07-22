@@ -21,6 +21,17 @@ class AddHouse extends Component
     public $price;
     public $photo;
     public $description;
+    public $meeting;
+    public $office_rooms;
+    public $single_rooms;
+    public $self_rooms;
+    public $sitting_rooms;
+    public $toilet;
+    public $garden;
+    public $parking;
+    public $room_type;
+    public $room_parking;
+    public $frames;
 
     // image path
     public $path;

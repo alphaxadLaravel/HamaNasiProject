@@ -26,41 +26,9 @@ class DatabaseSeeder extends Seeder
             'fullname' => 'admin',
             'role' => 'admin',
             'password' => '1234',
-            'phone' => '',
+            'phone' => '0743196599',
+            'email' => 'admin@gmail.com',
             'status' => 'admin',
-            'profile' => 'profiles/avatar.jpg',
-        ]);
-
-        // Normal user seed
-        DB::table('users')->insert([
-            'username' => 'alpha',
-            'fullname' => 'alpha jozee kakulu',
-            'role' => 'normal_user',
-            'password' => '1234',
-            'phone' => '',
-            'status' => 'normal_user',
-            'profile' => 'profiles/avatar.jpg',
-        ]);
-
-        // House Agent Seed
-        DB::table('users')->insert([
-            'username' => 'alex',
-            'fullname' => 'alex jumanne Ngoyi',
-            'role' => 'house_agent',
-            'password' => '1234',
-            'phone' => '',
-            'status' => 'house_agent',
-            'profile' => 'profiles/avatar.jpg',
-        ]);
-
-        //transport Agent
-        DB::table('users')->insert([
-            'username' => 'kanuti',
-            'fullname' => 'kanuti kanute mkuu',
-            'role' => 'transport_agent',
-            'password' => '1234',
-            'phone' => '',
-            'status' => 'transport_agent',
             'profile' => 'profiles/avatar.jpg',
         ]);
 

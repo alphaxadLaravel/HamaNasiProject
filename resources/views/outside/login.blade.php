@@ -48,22 +48,6 @@
                                     @enderror
                                 </small>
                             </div>
-                            <div class="extra mt-3 row justify-content-between">
-                                <div class="col-6">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value=""
-                                            id="RememberPassword">
-                                        <label class="form-check-label" for="RememberPassword">
-                                            Remember me
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="forgot-password text-end">
-                                        <a href="/forgot">Forgot password?</a>
-                                    </div>
-                                </div>
-                            </div>
 
                             <div class="text-center">
                                 <button type="submit" class="btn app-btn-primary w-100 theme-btn mx-auto">Ingia</button>

@@ -44,6 +44,7 @@
                                 <th class="cell"></th>
                                 <th class="cell">Fullname</th>
                                 <th class="cell">Phone</th>
+                                <th class="cell">Email</th>
                                 <th class="cell">Role</th>
                                 <th class="cell">Status</th>
                                 <th class="cell">Manage</th>
@@ -59,6 +60,7 @@
                                     <td class="cell"><span class="truncate">{{ ucwords($user->fullname) }}</span>
                                     </td>
                                     <td class="cell"><span class="truncate">{{ $user->phone }}</span>
+                                        <td class="cell"><span class="truncate">{{ $user->email }}</span>
                                     <td class="cell"><span
                                             class="truncate text-success">{{ ucwords($user->role) }}</span></td>
                                     <td class="cell"><span

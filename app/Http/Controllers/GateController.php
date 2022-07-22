@@ -15,6 +15,7 @@ class GateController extends Controller
             'agent_type' => 'required',
             'password' => 'required',
             'confirm' => 'required',
+            'email' => 'required',
             'phone' => 'required|numeric|unique:users',
         ]);
 
@@ -29,6 +30,7 @@ class GateController extends Controller
                     'password' => request('password'),
                     'role' => request('agent_type'),
                     'phone' => request('phone'),
+                    'email' => request('email'),
                     'status' => "pending...",
                     'profile' => "profiles/avatar.jpg",
                 ]);
@@ -51,6 +53,7 @@ class GateController extends Controller
             'username' => 'required|string|unique:users',
             'password' => 'required',
             'confirm' => 'required',
+            'email' => 'required',
             'phone' => 'required|numeric|unique:users',
         ]);
 
@@ -63,8 +66,9 @@ class GateController extends Controller
                     'fullname' => request('fullname'),
                     'username' => request('username'),
                     'password' => request('password'),
-                    'role' => "Normal User",
+                    'role' => "normal_user",
                     'phone' => request('phone'),
+                    'email' => request('email'),
                     'status' => "Allowed..",
                     'profile' => "profiles/avatar.jpg",
                 ]);

@@ -75,6 +75,15 @@
                                     </div>
                                 </div>
                                 <div class="email mb-2">
+                                    <small class="text-muted">Email</small>
+                                    <input name="email" type="text" class="form-control signup-name">
+                                    <small class="text-danger">
+                                        @error('email')
+                                            {{ $message }}
+                                        @enderror
+                                    </small>
+                                </div>
+                                <div class="email mb-2">
                                     <small class="text-muted">Phone Number</small>
                                     <input name="phone" type="text" class="form-control signup-name">
                                     <small class="text-danger">

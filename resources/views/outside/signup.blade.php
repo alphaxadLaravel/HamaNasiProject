@@ -13,12 +13,12 @@
                     <div class="auth-form-container text-start mx-auto">
                         <form method="POST" action="/user_signup" class="auth-form auth-signup-form">
                             @csrf
-							@if (Session::has('agent_error'))
+                            @if (Session::has('agent_error'))
                                 <div class="alert alert-danger alert-dismissible" role="alert">
                                     <small>Something went Wrong!</small>
                                 </div>
                             @endif
-							<div class="email mb-2">
+                            <div class="email mb-2">
                                 <small class="text-muted">Full Name</small>
                                 <input name="fullname" type="text" class="form-control signup-name">
                                 <small class="text-danger">
@@ -60,6 +60,15 @@
                                             @enderror
                                         </small>
                                     </div>
+                                </div>
+                                <div class="email mb-2">
+                                    <small class="text-muted">Email</small>
+                                    <input name="email" type="text" class="form-control signup-name">
+                                    <small class="text-danger">
+                                        @error('email')
+                                            {{ $message }}
+                                        @enderror
+                                    </small>
                                 </div>
                                 <div class="email mb-2">
                                     <small class="text-muted">Phone Number</small>

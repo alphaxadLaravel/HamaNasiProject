@@ -113,14 +113,14 @@
                             <span class="nav-link-text">New House</span>
                         </a>
                     </li>
-                    <li class="nav-item">
+                    {{-- <li class="nav-item">
                         <a class="nav-link {{ request()->is('profile') ? 'active' : '' }}" href="/profile">
                             <span class="nav-icon">
                                 <i class="mdi mdi-account"></i>
                             </span>
                             <span class="nav-link-text">Profile</span>
                         </a>
-                    </li>
+                    </li> --}}
                 @endif
 
                 {{-- Kama user aliengia ni transport Agent HApa --}}
@@ -182,14 +182,14 @@
                             <span class="nav-link-text">New Vehicle</span>
                         </a>
                     </li>
-                    <li class="nav-item ">
+                    {{-- <li class="nav-item ">
                         <a class="nav-link {{ request()->is('profile') ? 'active' : '' }}" href="/profile">
                             <span class="nav-icon">
                                 <i class="mdi mdi-account"></i>
                             </span>
                             <span class="nav-link-text">Profile</span>
                         </a>
-                    </li>
+                    </li> --}}
                 @endif
 
                 {{-- Kama user alieingia n normal usrer hapa --}}
@@ -252,14 +252,14 @@
                         </a>
                     </li>
 
-                    <li class="nav-item ">
+                    {{-- <li class="nav-item ">
                         <a class="nav-link {{ request()->is('profile') ? 'active' : '' }}" href="/profile">
                             <span class="nav-icon">
                                 <i class="mdi mdi-account"></i>
                             </span>
                             <span class="nav-link-text">Profile</span>
                         </a>
-                    </li>
+                    </li> --}}
                 @endif
 
 
