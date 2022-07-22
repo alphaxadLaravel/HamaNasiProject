@@ -64,5 +64,22 @@ class DatabaseSeeder extends Seeder
             'profile' => 'profiles/avatar.jpg',
         ]);
 
+        // Amount in Branch
+        DB::table('branches')->insert([
+            'phone' => '0743196599',
+            'amount' => '1000000',
+            'pin' => '1234',
+            'branch' => 'M-Pesa',
+        ]);
+
+        // Amount in bank here
+        DB::table('banks')->insert([
+            'account' => '00001',
+            'amount' => '1000000',
+            'cvv' => '1234',
+            'expire' => '0212',
+        ]);
+
+
     }
 }
