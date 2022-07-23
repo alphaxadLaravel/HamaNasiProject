@@ -2,10 +2,14 @@
 
 namespace App\Http\Livewire;
 
+use App\Models\Frame;
+use App\Models\Home;
 use Livewire\WithFileUploads;
 
 use Livewire\Component;
 use App\Models\House;
+use App\Models\Office;
+use App\Models\Room;
 
 class AddHouse extends Component
 {
@@ -24,7 +28,7 @@ class AddHouse extends Component
     public $meeting;
     public $office_rooms;
     public $single_rooms;
-    public $self_rooms;
+    public $self;
     public $sitting_rooms;
     public $toilet;
     public $garden;
@@ -42,6 +46,318 @@ class AddHouse extends Component
 
         if ($this->purpose == "For Rent") {
 
+            if ($this->category == 'Office') {
+                $this->validate([
+                    'regNo' => 'required',
+                    'region' => 'required',
+                    'district' => 'required',
+                    'category' => 'required',
+                    'purpose' => 'required',
+                    'period' => 'required',
+                    'meeting' => 'required',
+                    'office_rooms' => 'required',
+                    'rent_measure' => 'required',
+                    'price' => 'required',
+                    'photo' => 'required|mimes:jpg,jpeg,png,webp,gif|max:5048',
+                    'description' => 'required',
+                ]);
+
+                $data['photo'] = $this->photo->store('houses', 'public');
+
+                $new_house = House::Create([
+                    'regNumber' => $this->regNo,
+                    'region' => $this->region,
+                    'district' => $this->district,
+                    'category' => $this->category,
+                    'purpose' => $this->purpose,
+                    'rent_period' => $this->period . " " . $this->rent_measure,
+                    'price' => $this->price,
+                    'photos' => $data['photo'],
+                    'description' => $this->description,
+                    'user_id' => $user_id,
+                ]);
+
+                Office::Create([
+
+                    'house_id' => $new_house->id,
+                    'rooms' => $this->office_rooms,
+                    'hall' => $this->meeting,
+                ]);
+            }
+
+            if ($this->category == 'Home' || $this->category == 'Appartment') {
+                $this->validate([
+                    'regNo' => 'required',
+                    'region' => 'required',
+                    'district' => 'required',
+                    'category' => 'required',
+                    'purpose' => 'required',
+                    'period' => 'required',
+                    'single_rooms' => 'required',
+                    'sitting_rooms' => 'required',
+                    'self' => 'required',
+                    'toilet' => 'required',
+                    'garden' => 'required',
+                    'parking' => 'required',
+                    'rent_measure' => 'required',
+                    'price' => 'required',
+                    'photo' => 'required|mimes:jpg,jpeg,png,webp,gif|max:5048',
+                    'description' => 'required',
+                ]);
+
+                $data['photo'] = $this->photo->store('houses', 'public');
+
+                $new_house = House::Create([
+                    'regNumber' => $this->regNo,
+                    'region' => $this->region,
+                    'district' => $this->district,
+                    'category' => $this->category,
+                    'purpose' => $this->purpose,
+                    'rent_period' => $this->period . " " . $this->rent_measure,
+                    'price' => $this->price,
+                    'photos' => $data['photo'],
+                    'description' => $this->description,
+                    'user_id' => $user_id,
+                ]);
+
+                Home::Create([
+                    'house_id' => $new_house->id,
+                    'single' => $this->single_rooms,
+                    'self' => $this->self,
+                    'sitting' => $this->sitting_rooms,
+                    'toilet' => $this->toilet,
+                    'garden' => $this->garden,
+                    'parking' => $this->parking,
+                ]);
+            }
+
+            if ($this->category == 'Room') {
+                $this->validate([
+                    'regNo' => 'required',
+                    'region' => 'required',
+                    'district' => 'required',
+                    'category' => 'required',
+                    'purpose' => 'required',
+                    'period' => 'required',
+                    'room_type' => 'required',
+                    'room_parking' => 'required',
+                    'rent_measure' => 'required',
+                    'price' => 'required',
+                    'photo' => 'required|mimes:jpg,jpeg,png,webp,gif|max:5048',
+                    'description' => 'required',
+                ]);
+
+                $data['photo'] = $this->photo->store('houses', 'public');
+
+                $new_house = House::Create([
+                    'regNumber' => $this->regNo,
+                    'region' => $this->region,
+                    'district' => $this->district,
+                    'category' => $this->category,
+                    'purpose' => $this->purpose,
+                    'rent_period' => $this->period . " " . $this->rent_measure,
+                    'price' => $this->price,
+
+                    'photos' => $data['photo'],
+                    'description' => $this->description,
+                    'user_id' => $user_id,
+                ]);
+
+                Room::Create([
+                    'house_id' => $new_house->id,
+                    'type' => $this->room_type,
+                    'parking' => $this->room_parking,
+                ]);
+            }
+
+            if ($this->category == 'Frame') {
+                $this->validate([
+                    'regNo' => 'required',
+                    'region' => 'required',
+                    'district' => 'required',
+                    'category' => 'required',
+                    'purpose' => 'required',
+                    'period' => 'required',
+                    'frames' => 'required',
+                    'rent_measure' => 'required',
+                    'price' => 'required',
+                    'photo' => 'required|mimes:jpg,jpeg,png,webp,gif|max:5048',
+                    'description' => 'required',
+                ]);
+
+                $data['photo'] = $this->photo->store('houses', 'public');
+
+                $new_house = House::Create([
+                    'regNumber' => $this->regNo,
+                    'region' => $this->region,
+                    'district' => $this->district,
+                    'category' => $this->category,
+                    'purpose' => $this->purpose,
+                    'rent_period' => $this->period . " " . $this->rent_measure,
+                    'price' => $this->price,
+                    'photos' => $data['photo'],
+                    'description' => $this->description,
+                    'user_id' => $user_id,
+                ]);
+                Frame::Create([
+
+                    'house_id' => $new_house->id,
+                    'width' => $this->frames,
+                ]);
+            }
+        } elseif ($this->purpose == "For Sell") {
+
+            if ($this->category == 'Office') {
+                $this->validate([
+                    'regNo' => 'required',
+                    'region' => 'required',
+                    'district' => 'required',
+                    'category' => 'required',
+                    'purpose' => 'required',
+                    'meeting' => 'required',
+                    'office_rooms' => 'required',
+                    'rent_measure' => 'required',
+                    'price' => 'required',
+                    'photo' => 'required|mimes:jpg,jpeg,png,webp,gif|max:5048',
+                    'description' => 'required',
+                ]);
+
+                $data['photo'] = $this->photo->store('houses', 'public');
+
+                $new_house = House::Create([
+                    'regNumber' => $this->regNo,
+                    'region' => $this->region,
+                    'district' => $this->district,
+                    'category' => $this->category,
+                    'purpose' => $this->purpose,
+                    'price' => $this->price,
+                    'photos' => $data['photo'],
+                    'description' => $this->description,
+                    'user_id' => $user_id,
+                ]);
+
+                Office::Create([
+
+                    'house_id' => $new_house->id,
+                    'rooms' => $this->office_rooms,
+                    'hall' => $this->meeting,
+                ]);
+            }
+
+            if ($this->category == 'Home' || $this->category == 'Appartment') {
+                $this->validate([
+                    'regNo' => 'required',
+                    'region' => 'required',
+                    'district' => 'required',
+                    'category' => 'required',
+                    'purpose' => 'required',
+                    'single_rooms' => 'required',
+                    'sitting_rooms' => 'required',
+                    'self' => 'required',
+                    'toilet' => 'required',
+                    'garden' => 'required',
+                    'parking' => 'required',
+                    'rent_measure' => 'required',
+                    'price' => 'required',
+                    'photo' => 'required|mimes:jpg,jpeg,png,webp,gif|max:5048',
+                    'description' => 'required',
+                ]);
+
+                $data['photo'] = $this->photo->store('houses', 'public');
+
+                $new_house = House::Create([
+                    'regNumber' => $this->regNo,
+                    'region' => $this->region,
+                    'district' => $this->district,
+                    'category' => $this->category,
+                    'purpose' => $this->purpose,
+                    'price' => $this->price,
+                    'photos' => $data['photo'],
+                    'description' => $this->description,
+                    'user_id' => $user_id,
+                ]);
+
+                Home::Create([
+                    'house_id' => $new_house->id,
+                    'single' => $this->single_rooms,
+                    'self' => $this->self,
+                    'sitting' => $this->sitting_rooms,
+                    'toilet' => $this->toilet,
+                    'garden' => $this->garden,
+                    'parking' => $this->parking,
+                ]);
+            }
+            
+            if ($this->category == 'Room') {
+                $this->validate([
+                    'regNo' => 'required',
+                    'region' => 'required',
+                    'district' => 'required',
+                    'category' => 'required',
+                    'purpose' => 'required',
+                    'room_type' => 'required',
+                    'room_parking' => 'required',
+                    'rent_measure' => 'required',
+                    'price' => 'required',
+                    'photo' => 'required|mimes:jpg,jpeg,png,webp,gif|max:5048',
+                    'description' => 'required',
+                ]);
+
+                $data['photo'] = $this->photo->store('houses', 'public');
+
+                $new_house = House::Create([
+                    'regNumber' => $this->regNo,
+                    'region' => $this->region,
+                    'district' => $this->district,
+                    'category' => $this->category,
+                    'purpose' => $this->purpose,
+                    'price' => $this->price,
+                    'photos' => $data['photo'],
+                    'description' => $this->description,
+                    'user_id' => $user_id,
+                ]);
+
+                Room::Create([
+                    'house_id' => $new_house->id,
+                    'type' => $this->room_type,
+                    'parking' => $this->room_parking,
+                ]);
+            }
+
+            if ($this->category == 'Frame') {
+                $this->validate([
+                    'regNo' => 'required',
+                    'region' => 'required',
+                    'district' => 'required',
+                    'category' => 'required',
+                    'purpose' => 'required',
+                    'frames' => 'required',
+                    'rent_measure' => 'required',
+                    'price' => 'required',
+                    'photo' => 'required|mimes:jpg,jpeg,png,webp,gif|max:5048',
+                    'description' => 'required',
+                ]);
+
+                $data['photo'] = $this->photo->store('houses', 'public');
+
+                $new_house = House::Create([
+                    'regNumber' => $this->regNo,
+                    'region' => $this->region,
+                    'district' => $this->district,
+                    'category' => $this->category,
+                    'purpose' => $this->purpose,
+                    'price' => $this->price,
+                    'photos' => $data['photo'],
+                    'description' => $this->description,
+                    'user_id' => $user_id,
+                ]);
+                Frame::Create([
+                    'house_id' => $new_house->id,
+                    'width' => $this->frames,
+                ]);
+            }
+
+        } else {
             $this->validate([
                 'regNo' => 'required',
                 'region' => 'required',
@@ -49,50 +365,12 @@ class AddHouse extends Component
                 'category' => 'required',
                 'purpose' => 'required',
                 'period' => 'required',
+                'meeting' => 'required',
+                'office_rooms' => 'required',
                 'rent_measure' => 'required',
                 'price' => 'required',
                 'photo' => 'required|mimes:jpg,jpeg,png,webp,gif|max:5048',
                 'description' => 'required',
-            ]);
-
-            $data['photo'] = $this->photo->store('houses', 'public');
-
-            House::Create([
-                'regNumber' => $this->regNo,
-                'region' => $this->region,
-                'district' => $this->district,
-                'category' => $this->category,
-                'purpose' => $this->purpose,
-                'rent_period' => $this->period . " " . $this->rent_measure,
-                'price' => $this->price,
-                'photos' => $data['photo'],
-                'description' => $this->description,
-                'user_id' => $user_id,
-            ]);
-        } elseif ($this->purpose == "For Sell") {
-            $this->validate([
-                'regNo' => 'required',
-                'region' => 'required',
-                'district' => 'required',
-                'category' => 'required',
-                'purpose' => 'required',
-                'price' => 'required',
-                'photo' => 'required|mimes:jpg,jpeg,png,webp,gif|max:5048',
-                'description' => 'required',
-            ]);
-
-            $data['photo'] = $this->photo->store('houses', 'public');
-
-            House::Create([
-                'regNumber' => $this->regNo,
-                'region' => $this->region,
-                'district' => $this->district,
-                'category' => $this->category,
-                'purpose' => $this->purpose,
-                'price' => $this->price,
-                'photos' => $data['photo'],
-                'description' => $this->description,
-                'user_id' => $user_id,
             ]);
         }
 

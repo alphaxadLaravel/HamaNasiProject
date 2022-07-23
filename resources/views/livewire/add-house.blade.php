@@ -25,10 +25,7 @@
                                     class="text-danger">*</span></label>
                             <select class="form-select" wire:model="region" id="">
                                 <option>Select the region...</option>
-                                <option value="Mwanza">Mwanza</option>
-                                <option value="Dodma">Dodoma</option>
-                                <option value="Kigoma">Kigoma</option>
-                                <option>Dar</option>
+                                <option value="Dar">Dar</option>
                             </select>
                             <small class="text-danger">
                                 @error('region')
@@ -111,6 +108,7 @@
                             <div class="col-md-5">
                                 <div class="mb-3">
                                     <select class="form-select " wire:model="rent_measure">
+                                        <option value="">period..</option>
                                         <option value="month">Month</option>
                                         <option value="year">Year</option>
                                         <option value="week">Week</option>
@@ -182,12 +180,15 @@
                         </div>
                         <div class="col-md-4">
                             <div class="mb-3">
-                                <label for="setting-input-1" class="form-label">Self-Contained rooms <span
+                                <label for="setting-input-1" class="form-label">Public toilet <span
                                         class="text-danger">*</span></label>
-                                <input type="number" class="form-control" wire:model="self_rooms" value=""
-                                    placeholder="Number of self rooms...">
+                                <select class="form-select " wire:model="toilet">
+                                    <option value="">Select Toilet details...</option>
+                                    <option value="Avilable">Available</option>
+                                    <option value="No">No public toilet</option>
+                                </select>
                                 <small class="text-danger">
-                                    @error('self_rooms')
+                                    @error('toilet')
                                         {{ $message }}
                                     @enderror
                                 </small>
@@ -206,19 +207,18 @@
                                 </small>
                             </div>
                         </div>
+                        
+                        
                     </div>
                     <div class="row">
                         <div class="col-md-4">
                             <div class="mb-3">
-                                <label for="setting-input-1" class="form-label">Public toilet <span
+                                <label for="" class="form-label">Self-Contained rooms <span
                                         class="text-danger">*</span></label>
-                                <select class="form-select " wire:model="toilet">
-                                    <option value="">Select Toilet details...</option>
-                                    <option value="Avilable">Available</option>
-                                    <option value="No">No public toilet</option>
-                                </select>
+                                <input type="number" class="form-control" wire:model="self" value=""
+                                    placeholder="Number of self rooms...">
                                 <small class="text-danger">
-                                    @error('toilet')
+                                    @error('self')
                                         {{ $message }}
                                     @enderror
                                 </small>
@@ -362,7 +362,7 @@
 
                 </div>
                 <div class="d-flex justify-content-end">
-                    <button type="submit" class="btn app-btn-primary">Post Property</button>
+                    <button type="submit" wire:click="addHouse" class="btn app-btn-primary">Post Property</button>
                 </div>
             </form>
         </div>

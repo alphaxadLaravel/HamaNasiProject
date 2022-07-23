@@ -22,7 +22,7 @@ return new class extends Migration
             $table->string('toilet');
             $table->string('garden');
             $table->string('parking');
-            $table->foreign('house_id')->references('id')->on('homes')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('house_id')->references('id')->on('houses')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
         });
     }

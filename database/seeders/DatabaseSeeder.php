@@ -32,6 +32,17 @@ class DatabaseSeeder extends Seeder
             'profile' => 'profiles/avatar.jpg',
         ]);
 
+        DB::table('users')->insert([
+            'username' => 'alex',
+            'fullname' => 'alex',
+            'role' => 'house_agent',
+            'password' => '1234',
+            'phone' => '0743196599',
+            'email' => 'admin@gmail.com',
+            'status' => 'house_agent',
+            'profile' => 'profiles/avatar.jpg',
+        ]);
+
         // Amount in Branch
         DB::table('branches')->insert([
             'phone' => '0743196599',

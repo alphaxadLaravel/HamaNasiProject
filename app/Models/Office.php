@@ -13,6 +13,7 @@ class Office extends Model
 
     // allow the fillable columns 
     protected $fillable = [
+        'house_id',
         'rooms',
         'hall',
     ];

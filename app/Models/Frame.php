@@ -14,5 +14,7 @@ class Frame extends Model
     // allow the fillable columns 
     protected $fillable = [
         'width',
+        'house_id',
+
     ];
 }

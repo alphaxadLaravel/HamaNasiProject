@@ -13,6 +13,7 @@ class Room extends Model
 
     // allow the fillable columns 
     protected $fillable = [
+        'house_id',
         'type',
         'parking',
     ];
