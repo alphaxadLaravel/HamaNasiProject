@@ -26,43 +26,6 @@
                             </div>
                             <div class="col-md-4">
                                 <div class="mb-3">
-                                    <label for="setting-input-1" class="form-label">Region Located <span
-                                            class="text-danger">*</span></label>
-                                    <select class="form-select" wire:model="region" id="">
-                                        <option>Select the region...</option>
-                                        <option value="Dar">Dar</option>
-                                    </select>
-                                    <small class="text-danger">
-                                        @error('region')
-                                            {{ $message }}
-                                        @enderror
-                                    </small>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="mb-3">
-                                    <label for="setting-input-1" class="form-label">District located <span
-                                            class="text-danger">*</span></label>
-                                    <select class="form-select " wire:model="district">
-                                        <option value="">Selct District...</option>
-                                        <option value="Ilala">Ilala</option>
-                                        <option value="Kigamboni">kigamboni</option>
-                                        <option value="Temeke">Temeke</option>
-                                        <option value="kinondoni">Kinondoni</option>
-                                        <option value="Kimara">Kimara</option>
-                                    </select>
-                                    <small class="text-danger">
-                                        @error('district')
-                                            {{ $message }}
-                                        @enderror
-                                    </small>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="mb-3">
                                     <label for="setting-input-1" class="form-label">Main display Photo <span
                                             class="text-danger">*</span></label>
                                     <input type="file" class="form-control file-selector-button" id="setting-input-1"
@@ -92,20 +55,95 @@
                                     </small>
                                 </div>
                             </div>
+                        </div>
+
+                        <span class="my-4">Add Innitial routes:</span>
+                        {{-- Another route here --}}
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="mb-3">
+                                    <label for="setting-input-1" class="form-label">Place from <span
+                                            class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="setting-input-1" value=""
+                                        placeholder="Place from.." wire:model="place_from1">
+                                    <small class="text-danger">
+                                        @error('place_from1')
+                                            {{ $message }}
+                                        @enderror
+                                    </small>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="mb-3">
+                                    <label for="setting-input-1" class="form-label">Place to <span
+                                            class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="setting-input-1" value=""
+                                        placeholder="Place .." wire:model="place_t01">
+                                    <small class="text-danger">
+                                        @error('place_t01')
+                                            {{ $message }}
+                                        @enderror
+                                    </small>
+                                </div>
+                            </div>
                             <div class="col-md-4">
                                 <div class="mb-3">
                                     <label for="setting-input-1" class="form-label">Price <span
                                             class="text-danger">*</span></label>
-                                    <input type="number" class="form-control" id="setting-input-1" value=""
-                                        placeholder="e.g 200000" wire:model="price">
+                                    <input type="price" class="form-control" id="setting-input-1" value=""
+                                        placeholder="e.g 200000" wire:model="price_1">
                                     <small class="text-danger">
-                                        @error('price')
+                                        @error('price_1')
                                             {{ $message }}
                                         @enderror
                                     </small>
                                 </div>
                             </div>
                         </div>
+                        {{-- anoite --}}
+                        {{-- Another route here --}}
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="mb-3">
+                                    <label for="setting-input-1" class="form-label">Place from <span
+                                            class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="setting-input-1" value=""
+                                        placeholder="Place from.." wire:model="place_from2">
+                                    <small class="text-danger">
+                                        @error('place_from2')
+                                            {{ $message }}
+                                        @enderror
+                                    </small>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="mb-3">
+                                    <label for="setting-input-1" class="form-label">Place to <span
+                                            class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="setting-input-1" value=""
+                                        placeholder="Place .." wire:model="place_t02">
+                                    <small class="text-danger">
+                                        @error('place_t02')
+                                            {{ $message }}
+                                        @enderror
+                                    </small>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="mb-3">
+                                    <label for="setting-input-1" class="form-label">Price <span
+                                            class="text-danger">*</span></label>
+                                    <input type="price" class="form-control" id="setting-input-1" value=""
+                                        placeholder="e.g 200000" wire:model="price_2">
+                                    <small class="text-danger">
+                                        @error('price_2')
+                                            {{ $message }}
+                                        @enderror
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                        {{-- anoite --}}
 
                         <div class="row">
                             <div class="col-md-12">

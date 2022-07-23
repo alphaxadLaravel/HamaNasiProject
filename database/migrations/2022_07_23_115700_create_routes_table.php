@@ -13,14 +13,15 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('transports', function (Blueprint $table) {
+        Schema::create('routes', function (Blueprint $table) {
             $table->id();
-            $table->string('plate');
             $table->bigInteger('user_id')->unsigned()->nullable();
-            $table->string('type');
-            $table->longText('photo');
-            $table->longText('description');
+            $table->bigInteger('transport_id')->unsigned()->nullable();
+            $table->string('from');
+            $table->string('to');
+            $table->string('price');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('transport_id')->references('id')->on('transports')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
         });
     }
@@ -32,6 +33,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('transports');
+        Schema::dropIfExists('routes');
     }
 };

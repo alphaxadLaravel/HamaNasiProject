@@ -43,6 +43,28 @@ class DatabaseSeeder extends Seeder
             'profile' => 'profiles/avatar.jpg',
         ]);
 
+        DB::table('users')->insert([
+            'username' => 'transport',
+            'fullname' => 'transport',
+            'role' => 'transport_agent',
+            'password' => '1234',
+            'phone' => '0743196599',
+            'email' => 'admin@gmail.com',
+            'status' => 'transport_agent',
+            'profile' => 'profiles/avatar.jpg',
+        ]);
+
+        DB::table('users')->insert([
+            'username' => 'normal',
+            'fullname' => 'normal',
+            'role' => 'normal_user',
+            'password' => '1234',
+            'phone' => '0743196599',
+            'email' => 'admin@gmail.com',
+            'status' => 'normal_user',
+            'profile' => 'profiles/avatar.jpg',
+        ]);
+
         // Amount in Branch
         DB::table('branches')->insert([
             'phone' => '0743196599',

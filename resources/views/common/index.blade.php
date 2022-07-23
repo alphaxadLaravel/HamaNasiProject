@@ -61,39 +61,7 @@
     <!-- Header End -->
 
 
-    <!-- Search Start -->
-    <div class="container-fluid bg-primary mb-5 wow fadeIn" data-wow-delay="0.1s" style="padding: 35px;">
-        <div class="container">
-            <div class="row g-2">
-                <div class="col-md-10">
-                    <div class="row g-2">
-                        <div class="col-md-4">
-                            <input type="text" class="form-control border-0 py-3" placeholder="Search a Property...">
-                        </div>
-                        <div class="col-md-4">
-                            <select class="form-select border-0 py-3">
-                                <option selected>Property Type</option>
-                                <option value="1">House</option>
-                                <option value="2">Apartment</option>
-                                <option value="3">Shop</option>
-                            </select>
-                        </div>
-                        <div class="col-md-4">
-                            <select class="form-select border-0 py-3">
-                                <option selected>Location</option>
-                                <option value="1">Mwanza</option>
-                                <option value="3">Dodoma</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-2">
-                    <button class="btn btn-dark border-0 w-100 py-3">Search</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Search End -->
+
 
 
     <!-- Category Start -->
@@ -148,7 +116,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                {{-- <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
                     <a class="cat-item d-block bg-light text-center rounded p-3" href="">
                         <div class="rounded p-4">
                             <div class="icon mb-3">
@@ -191,7 +159,7 @@
                             <span>123 Properties</span>
                         </div>
                     </a>
-                </div>
+                </div> --}}
             </div>
         </div>
     </div>
