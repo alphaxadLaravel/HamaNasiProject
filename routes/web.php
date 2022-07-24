@@ -5,6 +5,7 @@ use App\Http\Controllers\GateController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PropertyController;
+use App\Http\Controllers\TransportController;
 
 // Welcome Page here
 Route::get('/', function () {
@@ -136,6 +137,8 @@ Route::get('/house_agent_add_house', function () {
     return view('house_agent.new_house');
 });
 
+
+
 // Register an Agent here
 Route::post('/agent_auth',[GateController::class,'agents']);
 
@@ -151,3 +154,7 @@ Route::post('/login_users',[GateController::class,'login']);
 // Go to pay here
 Route::get('/go_pay/{id}',[PropertyController::class,'goToCheckout']);
 
+// ne Route
+Route::post('/new_route/{id}',[TransportController::class,'addRoute']);
+
+Route::get('/add_route/{id}',[TransportController::class,'gotoAddRoute']);

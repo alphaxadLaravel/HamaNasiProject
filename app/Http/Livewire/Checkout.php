@@ -2,10 +2,13 @@
 
 namespace App\Http\Livewire;
 
+use App\Models\AgentAccount;
 use App\Models\Bank;
 use App\Models\Branches;
 use App\Models\House;
+use App\Models\Transaction;
 use Livewire\Component;
+use Illuminate\Support\Str;
 
 class Checkout extends Component
 {
@@ -14,6 +17,7 @@ class Checkout extends Component
     public $step3;
     public $branch;
     public $vat;
+    public $agent_profit;
 
     public $phone;
     public $pin;
@@ -81,20 +85,26 @@ class Checkout extends Component
 
             if ($phone) {
                 $house = House::where('id', $this->house_id)->first();
+  
+               
+
 
                 if ($phone->branch == $this->branch) {
 
-                    if ($phone->amount > $house->price) {
+                    if ($phone->amount >= $house->price) {
                         $new_amount = $phone->amount - $house->price;
 
                         if ($house->purpose == "For Rent") {
-                            $this->vat = 0.4 * $house->price;
+                            $this->vat = 0.4  * $house->price;
+                            $this->agent_profit = 0.6 * $house->price;
 
                         } else {
-                            $this->vat = 0.1 * $house->price;
+                            $this->vat = 0.2 * $house->price;
+                            $this->agent_profit = 0.8 * $house->price;
+
                         }
 
-                        Branches::where('phone', $phone)->update([
+                        Branches::where('phone', $phone->phone)->update([
                             'amount' => $new_amount
                         ]);
 
@@ -103,6 +113,33 @@ class Checkout extends Component
 
                         Bank::where('account', '00001')->update([
                             'amount' =>$profit
+                        ]);
+
+                        $agent_account = AgentAccount::where('user_id', $house->user_id)->first();
+                        $faida = $agent_account->profit + $this->agent_profit;
+
+                       AgentAccount::where('user_id', $house->user_id)->update([
+                            'profit'=>$faida
+                        ]);
+
+                        $invoice = Str::random(8);
+
+                        $fullname = session()->get('user')['fullname'];
+
+                        // house_id 	From 	To 	Amount 	purpose 	Branch 	invoice
+                        
+                        Transaction::Create([
+                            'house_id' =>$this->house_id,
+                            'From' => $fullname,
+                            'To' => $house->user->fullname,
+                            'Amount' => $house->price,
+                            'purpose'=> $house->purpose,
+                            'Branch' => $this->branch,
+                            'invoice' =>$invoice,
+                        ]);
+
+                        House::where('id', $this->house_id)->update([
+                            'status'=>'Payed'
                         ]);
 
                         session()->flash('payed');

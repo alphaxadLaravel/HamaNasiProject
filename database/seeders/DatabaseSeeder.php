@@ -25,43 +25,10 @@ class DatabaseSeeder extends Seeder
             'username' => 'admin',
             'fullname' => 'admin',
             'role' => 'admin',
-            'password' => '1234',
+            'password' => '123456',
             'phone' => '0743196599',
             'email' => 'admin@gmail.com',
             'status' => 'admin',
-            'profile' => 'profiles/avatar.jpg',
-        ]);
-
-        DB::table('users')->insert([
-            'username' => 'alex',
-            'fullname' => 'alex',
-            'role' => 'house_agent',
-            'password' => '1234',
-            'phone' => '0743196599',
-            'email' => 'admin@gmail.com',
-            'status' => 'house_agent',
-            'profile' => 'profiles/avatar.jpg',
-        ]);
-
-        DB::table('users')->insert([
-            'username' => 'transport',
-            'fullname' => 'transport',
-            'role' => 'transport_agent',
-            'password' => '1234',
-            'phone' => '0743196599',
-            'email' => 'admin@gmail.com',
-            'status' => 'transport_agent',
-            'profile' => 'profiles/avatar.jpg',
-        ]);
-
-        DB::table('users')->insert([
-            'username' => 'normal',
-            'fullname' => 'normal',
-            'role' => 'normal_user',
-            'password' => '1234',
-            'phone' => '0743196599',
-            'email' => 'admin@gmail.com',
-            'status' => 'normal_user',
             'profile' => 'profiles/avatar.jpg',
         ]);
 

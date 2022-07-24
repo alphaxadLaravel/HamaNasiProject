@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\AgentAccount;
 use Illuminate\Http\Request;
 use App\Models\User;
 
@@ -24,7 +25,7 @@ class GateController extends Controller
 
             if (!$check) {
 
-                User::Create([
+                $agent_id = User::Create([
                     'fullname' => request('fullname'),
                     'username' => request('username'),
                     'password' => request('password'),
@@ -33,6 +34,12 @@ class GateController extends Controller
                     'email' => request('email'),
                     'status' => "pending...",
                     'profile' => "profiles/avatar.jpg",
+                ]);
+
+                AgentAccount::Create([
+                    'user_id' => $agent_id->id,
+                    'phone' => request('phone'),
+                    'profit' => "0",
                 ]);
 
                 session()->flash('approove', '');
@@ -111,9 +118,16 @@ class GateController extends Controller
             session()->flash('approove','');
             return redirect('/login');
 
+        }  elseif($check->role == "admin"){
+
+            request()->session()->put('user',$check);
+            return redirect('/dashboard');
         }
-        elseif($check->role == "transport_agent" || $check->role == "house_agent" || $check->role == "admin"){
+        elseif($check->role == "transport_agent" || $check->role == "house_agent" ){
             
+            $profit = AgentAccount::where('user_id', $check->id)->first();
+
+            request()->session()->put('profit',$profit);
             request()->session()->put('user',$check);
             return redirect('/dashboard');
 

@@ -28,7 +28,7 @@
                 'type'=>ucfirst($house->category),
                 'price'=>number_format($house->price),
                 'location'=>ucwords($house->district.", ".$house->region),
-                'status'=>ucwords($house->purpose),
+                'status'=>(($house->status == "Booked" ? 'Booked':$house->purpose)),
                 'image'=>$house->photos,
                 'id'=>$house->id,
             ]);

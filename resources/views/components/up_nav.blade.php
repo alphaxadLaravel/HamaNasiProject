@@ -28,6 +28,9 @@
 				<div class="app-utilities col-auto">
 					
 					<div class="app-utility-item app-user-dropdown dropdown">
+						@if (session()->get('user')['role'] == 'house_agent' || session()->get('user')['role'] == 'transport_agent'  )
+						<small class="text-muted mx-2">Profit: Tsh {{number_format(session()->get('profit')['profit'])}}/= </small>
+						@endif 
 						<a class="dropdown-toggle" id="user-dropdown-toggle" data-bs-toggle="dropdown" href="#"
 							role="button" aria-expanded="false"><img src="{{asset(session()->get('user')['profile'])}}"
 								alt="user profile" class="rounded-circle"></a>

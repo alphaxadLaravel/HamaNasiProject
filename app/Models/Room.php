@@ -17,4 +17,8 @@ class Room extends Model
         'type',
         'parking',
     ];
+
+    public function house(){
+        return $this->belongsTo(House::class);
+    }
 }

@@ -13,19 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('houses', function (Blueprint $table) {
+        Schema::create('agent_accounts', function (Blueprint $table) {
             $table->id();
-            $table->string('regNumber');
             $table->bigInteger('user_id')->unsigned()->nullable();
-            $table->string('region');
-            $table->string('district');
-            $table->string('category');
-            $table->string('purpose');
-            $table->string('rent_period')->default("not for Rent");
-            $table->longText('photos');
-            $table->string('price');
-            $table->longText('description');
-            $table->string('status')->default('Available');
+            $table->string('phone');
+            $table->string('profit');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
         });
@@ -38,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('houses');
+        Schema::dropIfExists('agent_accounts');
     }
 };

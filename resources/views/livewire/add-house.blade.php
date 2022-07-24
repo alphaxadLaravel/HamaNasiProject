@@ -8,10 +8,10 @@
                 <div class="row">
                     <div class="col-md-4">
                         <div class="mb-3">
-                            <label for="setting-input-1" class="form-label">Property Reg.Number <span
+                            <label for="setting-input-1" class="form-label">Physical Address <span
                                     class="text-danger">*</span></label>
                             <input type="text" class="form-control" wire:model="regNo" value=""
-                                placeholder="Enter Property Reg.Number">
+                                placeholder="Enter Address">
                             <small class="text-danger">
                                 @error('regNo')
                                     {{ $message }}
@@ -25,7 +25,7 @@
                                     class="text-danger">*</span></label>
                             <select class="form-select" wire:model="region" id="">
                                 <option>Select the region...</option>
-                                <option value="Dar">Dar</option>
+                                <option value="Dar-es-Salaam">Dar-es-Salaam</option>
                             </select>
                             <small class="text-danger">
                                 @error('region')
@@ -44,6 +44,7 @@
                                 <option value="Kigamboni">kigamboni</option>
                                 <option value="Temeke">Temeke</option>
                                 <option value="kinondoni">Kinondoni</option>
+                                <option value="Ubungo">Kinondoni</option>
                             </select>
                             <small class="text-danger">
                                 @error('district')
@@ -62,8 +63,7 @@
                             <select class="form-select " wire:model="category">
                                 <option value="">Select category...</option>
                                 <option value="Office">Office</option>
-                                <option value="Home">Home</option>
-                                <option value="Appartment">Appartment</option>
+                                <option value="Home">Home / Appartment</option>
                                 <option value="Frame">Frame</option>
                                 <option value="Room">Room</option>
                             </select>
@@ -269,8 +269,8 @@
                                         class="text-danger">*</span></label>
                                 <select class="form-select " wire:model="room_type">
                                     <option value="">Select Room Type...</option>
-                                    <option value="single">Single Room</option>
-                                    <option value="Self">Single Contained</option>
+                                    <option value="Single Room">Single Room</option>
+                                    <option value="Self Contained">Self Contained</option>
                                 </select>
                                 <small class="text-danger">
                                     @error('room_type')
@@ -362,7 +362,7 @@
 
                 </div>
                 <div class="d-flex justify-content-end">
-                    <button type="submit" wire:click="addHouse" class="btn app-btn-primary">Post Property</button>
+                    <button type="submit" wire:click="addHouse" class="btn app-btn-primary">Add New Property</button>
                 </div>
             </form>
         </div>

@@ -22,4 +22,7 @@ class Home extends Model
         'garden',
         'parking',
     ];
+    public function house(){
+        return $this->belongsTo(House::class);
+    }
 }

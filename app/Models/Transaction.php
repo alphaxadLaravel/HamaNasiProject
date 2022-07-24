@@ -5,20 +5,21 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Frame extends Model
+class Transaction extends Model
 {
     use HasFactory;
-    // rooms
-    protected $table = "frames";
+
+    protected $table = "transactions";
 
     // allow the fillable columns 
     protected $fillable = [
-        'width',
         'house_id',
-
+        'From',
+        'To',
+        'Amount',
+        'purpose',
+        'Branch',
+        'invoice',
     ];
 
-    public function house(){
-        return $this->belongsTo(House::class);
-    }
 }

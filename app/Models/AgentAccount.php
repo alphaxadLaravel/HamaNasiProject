@@ -5,20 +5,16 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Frame extends Model
+class AgentAccount extends Model
 {
     use HasFactory;
     // rooms
-    protected $table = "frames";
+    protected $table = "agent_accounts";
 
     // allow the fillable columns 
     protected $fillable = [
-        'width',
-        'house_id',
-
+        'user_id',
+        'phone',
+        'profit',
     ];
-
-    public function house(){
-        return $this->belongsTo(House::class);
-    }
 }

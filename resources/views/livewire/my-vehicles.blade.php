@@ -16,12 +16,10 @@
                         <table class="table app-table-hover mb-0 text-left">
                             <thead>
                                 <tr>
-                                    <th class="cell">Vehicle</th>
-                                    <th class="cell"></th>
+                                    <th class="cell">Photo</th>
+                                    <th class="cell">Plate Number</th>
                                     <th class="cell">Vehicle Type</th>
                                     <th class="cell">Descriprion</th>
-                                    <th class="cell">location</th>
-                                    <th class="cell">General Price</th>
                                     <th class="cell">Manage</th>
                                 </tr>
                             </thead>
@@ -34,11 +32,9 @@
                                         <td class="cell"><span class="truncate">{{ucwords($vehicle->plate)}}</span></td>
                                         <td class="cell"><span class="truncate">{{ucwords($vehicle->type)}}</span></td>
                                         <td class="cell"><span class="truncate">{{ucwords($vehicle->description)}}</span></td>
-                                        <td class="cell"><span class="truncate">{{ucwords($vehicle->district.", ".$vehicle->region)}}</span></td>
-                                        <td class="cell"><span class="truncate text-success">{{number_format($vehicle->price)}}/=</span></td>
                                         <td class="">
                                             <a class="mx-2 btn-sm btn app-btn-secondary" href="#"><i class="mdi mdi-delete text-danger "></i></a>
-                                            <a class="btn-sm btn app-btn-secondary" href="/update"><i class="mdi mdi-pencil text-primary "></i></a>
+                                            <a class="btn-sm btn app-btn-secondary" href="/add_route/{{$vehicle->id}}"><i class="mdi mdi-plus text-primary "></i></a>
                                         </td>
                                     </tr>
                                 @endforeach

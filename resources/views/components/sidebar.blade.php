@@ -77,15 +77,6 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link {{ request()->is('house_agent_bookings') ? 'active' : '' }}"
-                            href="/house_agent_bookings">
-                            <span class="nav-icon">
-                                <i class="mdi mdi-book-plus"></i>
-                            </span>
-                            <span class="nav-link-text">Bookings</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link {{ request()->is('house_agent_houses') ? 'active' : '' }}"
                             href="/house_agent_houses">
                             <span class="nav-icon">

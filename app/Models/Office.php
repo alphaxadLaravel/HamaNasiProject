@@ -17,4 +17,7 @@ class Office extends Model
         'rooms',
         'hall',
     ];
+    public function house(){
+        return $this->belongsTo(House::class);
+    }
 }

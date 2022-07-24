@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\House;
 use App\Models\Booking;
+use Carbon\Carbon;
 
 class PropertyController extends Controller
 {
@@ -26,7 +27,13 @@ class PropertyController extends Controller
             Booking::Create([
                 'user_id' => $user_id,
                 'house_id' => $house_id,
+                'status' => 'Booked'
             ]);
+
+             House::where('id',$house_id)->update([
+                'status'=>'Booked'
+            ]);
+
     
             session()->flash('booked','');
     
@@ -52,7 +59,6 @@ class PropertyController extends Controller
     {
 
         $single_house = House::where('id', $id)->first();
- 
 
         return view('users.house_details',['single_house'=>$single_house]);
     }
